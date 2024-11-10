@@ -1,9 +1,50 @@
 @import url('base.css');
 @import url('config.css');
 
-nav .container .navbar-list ul:first-child li .nav-link {
+
+nav .container-fluid .navbar-list ul:first-child li .nav-link {
     margin: 0 10px;
     font-size: 15px;
     font-weight: 600;
     text-transform: capitalize;
 } 
+
+header .hero {
+    width: 100%;
+    height: 85vh;
+    background: linear-gradient(to right,var(--Shark) 65%, #21252962), url('../media/img/hero-background.png') no-repeat right;
+}
+
+
+header .hero div h1 {
+    font-size: 62px;
+    font-weight: 700;
+
+
+}
+
+header .hero div .hero-buttons .btn {
+   font-size: 15px;
+   font-weight: 600;
+   background-color:  var(--Mountain_Meadow);
+}
+
+header .hero div .hero-buttons .btn:hover {
+   background-color: transparent;
+   border: 1px solid var(--Mountain_Meadow);
+  
+}
+
+header .hero div .hero-buttons .contact-link {
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #C7C8C9;
+    transition: all 0.2s;
+
+}
+
+
+header .hero div .hero-buttons .contact-link:hover {
+	color: #ffffff;
+}
