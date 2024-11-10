@@ -1,4 +1,9 @@
 @import url('base.css');
 @import url('config.css');
 
-
+nav .container .navbar-list ul:first-child li .nav-link {
+    margin: 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+} 
