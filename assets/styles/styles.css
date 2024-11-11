@@ -23,7 +23,7 @@ nav .container-fluid .navbar-list ul:last-child li .nav-link img {
 header .hero {
     width: 100%;
     min-height: 85vh;
-    background: linear-gradient(to right,var(--Shark) 65%, #21252962), url('../media/img/hero-background.png') no-repeat right;
+    background: linear-gradient(to right,var(--Shark) 80%, #21252962), url('../media/img/hero-background.png') no-repeat right;
     background-size: contain;
 }
 
@@ -37,6 +37,7 @@ header .hero div .hero-buttons .btn {
 header .hero div .hero-buttons .btn:hover {
    background-color: transparent;
    border: 1px solid var(--Mountain_Meadow);
+   color: var(--Mountain_Meadow) !important;
   
 }
 
