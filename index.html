@@ -27,8 +27,8 @@
 </head>
 <body >
     
-    <header class="header">
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark ps-5 px-5">
+    <header id="header"> <!-- header -->
+       <nav id="navBar" class="navbar w-100 navbar-expand-lg navbar-dark bg-dark ps-5 px-5"> <!-- navbar -->
         <div class="container-fluid">
             <a draggable="false" class="navbar-brand" href=""><img draggable="false" width="40" src="assets/media/img/logo.png" alt="logo" srcset=""></a>
 
@@ -38,40 +38,84 @@
 
             <div id="menu-toggle" class="navbar-list navbar-collapse collapse">
                 <ul class="navbar-nav  m-auto mb-3 mb-lg-0">
-                    <li draggable="false" class="nav-item active" aria-current="page"><a draggable="false" class="nav-link" href="">home</a></li>
-                    <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="">about</a></li>
+                    <li draggable="false" class="nav-item active" aria-current="page"><a draggable="false" class="nav-link" href="#header">home</a></li>
+                    <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#about">about</a></li>
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="">services</a></li>
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="">projects</a></li>
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="">certificates</a></li>
+                    <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="">blogs</a></li>
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="">contact</a></li>
                 </ul>
 
 
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://github.com/driouechoussa"><img width="26" draggable="false"  src="assets/media/icons/github.ico" alt="github"></a></li>
-                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://x.com/driouechoussa"><img width="26" draggable="false"  src="assets/media/icons/twitter.ico" alt="twitter"></a></li>
-                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://www.instagram.com/driouechoussa/"><img width="26" draggable="false"  src="assets/media/icons/instagram.ico" alt="instagram"></a></li>
-                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://www.linkedin.com/in/oussama-driouech-b47799273/"><img width="26" draggable="false"  src="assets/media/icons/linkedin.ico" alt="linkedin"></a></li>
+                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://github.com/driouechoussa"><img class="rounded " width="26" draggable="false"  src="assets/media/icons/github.ico" alt="github"></a></li>
+                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://x.com/driouechoussa"><img class="rounded" width="26" draggable="false"  src="assets/media/icons/twitter.ico" alt="twitter"></a></li>
+                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://www.instagram.com/driouechoussa/"><img class="rounded" width="26" draggable="false"  src="assets/media/icons/instagram.ico" alt="instagram"></a></li>
+                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://www.linkedin.com/in/oussama-driouech-b47799273/"><img class="rounded" width="26" draggable="false"  src="assets/media/icons/linkedin.ico" alt="linkedin"></a></li>
                 </ul>
             </div>
         </div>
        </nav>   
 
        <div class="hero container-fluid d-flex align-items-center ps-5">
-        <div class="h-50 w-50">
+        <div class="row h-50 w-50">
             <h1 class="text-light">
                 <span class="text-capitalize">hi!</span> i'm <span class="text-capitalize">oussama</span>,
                 a <span class="text-capitalize">software developer</span>
             </h1>
             <div class="hero-buttons mt-5">
-                <button type="button" class="btn text-light ps-4 px-4 pt-2 pb-2 text-capitalize">get my <span class="text-uppercase">cv</span> </button>
-                <a draggable="false" href="" class="contact-link ms-4 ps-2 px-4 pt-2 pb-2 text-capitalize" >contact me</a>
+                <button type="button" class="btn text-light ps-4 px-4 pt-2 pb-2 text-capitalize">get my <span class="text-uppercase">cv</span></button>
+                <a draggable="false" href="" class="contact-link ms-4 ps-2 px-4 pt-2 pb-2" >contact me</a>
             </div>
         </div>
        </div>
     </header>
 
-    
+    <section id="about" class="container-fluid bg-light d-flex align-items-center p-5 justify-content-between"> <!-- about section -->
+        <div class="col-4" >
+            <img draggable="false" class="rounded" width="300" src="assets/media/img/overview-photo.png" alt="overview_picture">
+        </div>
+        <div class="col-6">
+          <div class="about-text">
+            <h3 class="section_title text-capitalize">
+                about me
+            </h3>
+            <p>
+                 I am a dedicated and hardworking person who believes in honesty and good working relationships. I have extensive experience in this field for 5 years.I can create modern and responsive websites and mobile applications for all devices, it will be a great pleasure if you allow me to work on your project.
+            </p>
+          </div>
+
+          <div class="skills_cn">
+           <div class="skill-card  p-2 m-2 rounded d-flex align-items-center"><img class="rounded-2" draggable="false" width="30" src="assets/media/icons/code-block.ico" alt="codeblock"><span>problem solving</span></div>
+           <div class="skill-card  p-2 m-2 rounded d-flex align-items-center"><img class="rounded-2" draggable="false" width="30" src="assets/media/icons/time.ico" alt=""><span>managing time</span></div>
+           <div class="skill-card  p-2 m-2 rounded d-flex align-items-center"><img class="rounded-2" draggable="false" width="30" src="assets/media/icons/code.ico" alt="code"><span>programming principles</span></div>
+           <div class="skill-card  p-2 m-2 rounded d-flex align-items-center"><img class="rounded-2" draggable="false" width="30" src="assets/media/icons/debug.ico" alt="debug"><span>debugging</span></div>
+          </div>
+
+        </div>
+    </section>
+
+
+
+    <section id="services"> <!-- services section -->
+        <div class="textContent-cn">
+            <h3 >
+                hello
+            </h3>
+
+            <p>
+                dfdsfsqg
+            </p>
+
+        </div>
+
+        <div class="services_cards_cn">
+            
+        </div>
+    </section>
+
+ 
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/bootstrap.js"></script>

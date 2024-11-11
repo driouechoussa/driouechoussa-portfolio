@@ -1,6 +1,9 @@
 @import url('base.css');
 @import url('config.css');
 
+nav {
+    z-index: 999;
+}
 
 nav .container-fluid .navbar-list ul:first-child li .nav-link {
     margin: 0 10px;
@@ -9,19 +12,21 @@ nav .container-fluid .navbar-list ul:first-child li .nav-link {
     text-transform: capitalize;
 } 
 
+
+nav .container-fluid .navbar-list ul:last-child li .nav-link img {
+   
+    background-color: var(--Mountain_Meadow);
+    padding: 2px;
+    
+} 
+
 header .hero {
     width: 100%;
-    height: 85vh;
+    min-height: 85vh;
     background: linear-gradient(to right,var(--Shark) 65%, #21252962), url('../media/img/hero-background.png') no-repeat right;
+    background-size: contain;
 }
 
-
-header .hero div h1 {
-    font-size: 62px;
-    font-weight: 700;
-
-
-}
 
 header .hero div .hero-buttons .btn {
    font-size: 15px;
@@ -36,15 +41,87 @@ header .hero div .hero-buttons .btn:hover {
 }
 
 header .hero div .hero-buttons .contact-link {
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
     color: #C7C8C9;
     transition: all 0.2s;
-
 }
 
 
 header .hero div .hero-buttons .contact-link:hover {
 	color: #ffffff;
 }
+
+
+  @media (max-width: 580px) {
+    header .hero div {
+        margin: auto;
+        width: 100% !important;
+        
+    }
+
+    header .hero div h1 {
+        font-size: 45px !important;
+        text-align: center;
+    }
+
+    
+    header .hero div .hero-buttons {
+        display: flex;
+        justify-content: center;
+    }  
+}
+
+@media (min-width: 581px) and (max-width: 756px) {
+    header .hero div {
+        margin: auto;
+        width: 100% !important;
+        
+    }
+
+    header .hero div h1 {
+        font-size: 55px !important;
+        text-align: center;
+    }
+
+    
+    header .hero div .hero-buttons {
+        display: flex;
+        justify-content: center;
+    }
+}
+  
+
+
+
+section div:last-child .section_title {
+   
+    display: inline-block;
+    border-bottom: 2px solid var(--Mountain_Meadow);
+    color: var(--Shark);
+    
+}
+
+
+
+section div:last-child .skills_cn {
+    display: grid;
+    grid-template-columns: 270px 250px;
+    gap: 20px;
+}
+
+section div:last-child .skills_cn .skill-card {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+section div:last-child .skills_cn .skill-card img {
+    background-color: var(--Mountain_Meadow);
+}
+
+section div:last-child .skills_cn .skill-card span {
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-left: 5px;
+    font-family:var(--font_Montserrat) ;
+    
+}
+
