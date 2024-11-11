@@ -103,9 +103,9 @@ section div:last-child .section_title {
 
 
 
-section div:last-child .skills_cn {
+section div.skills_cn {
     display: grid;
-    grid-template-columns: 270px 250px;
+    grid-template-columns: 40% 40%;
     gap: 20px;
 }
 
@@ -121,8 +121,47 @@ section div:last-child .skills_cn .skill-card span {
     font-size: 15px;
     font-weight: 400;
     text-transform: capitalize;
-    margin-left: 5px;
+    margin-left: 8px;
     font-family:var(--font_Montserrat) ;
     
 }
+
+@media (max-width: 580px) {
+    header .hero div {
+        margin: auto;
+        width: 100% !important;
+        
+    }
+
+    header .hero div h1 {
+        font-size: 45px !important;
+        text-align: center;
+    }
+
+    
+    header .hero div .hero-buttons {
+        display: flex;
+        justify-content: center;
+    }  
+}
+
+@media (min-width: 581px) and (max-width: 756px) {
+    header .hero div {
+        margin: auto;
+        width: 100% !important;
+        
+    }
+
+    header .hero div h1 {
+        font-size: 55px !important;
+        text-align: center;
+    }
+
+    
+    header .hero div .hero-buttons {
+        display: flex;
+        justify-content: center;
+    }
+}
+  
 
