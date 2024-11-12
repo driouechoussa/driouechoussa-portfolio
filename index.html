@@ -40,7 +40,7 @@
                 <ul class="navbar-nav  m-auto mb-3 mb-lg-0">
                     <li draggable="false" class="nav-item active" aria-current="page"><a draggable="false" class="nav-link" href="#header">home</a></li>
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#about">about</a></li>
-                    <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="">services</a></li>
+                    <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#services">services</a></li>
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="">projects</a></li>
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="">certificates</a></li>
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="">blogs</a></li>
@@ -72,12 +72,12 @@
        </div>
     </header>
 
-    <section id="about" class="b container-fluid bg-light d-flex align-items-center p-5 justify-content-between"> <!-- about section -->
-        <div class="col-4" >
+    <section id="about" class="container-fluid bg-light  d-flex align-items-center p-5 justify-content-between"> <!-- about section -->
+        <div class="pic_cn " >
             <img draggable="false" class="rounded" width="300" src="assets/media/img/overview-photo.png" alt="overview_picture">
         </div>
         <div class="col-6">
-          <div class="about-text">
+          <div class="about-text  ">
             <h3 class="section_title text-capitalize">
                 about me
             </h3>
@@ -98,20 +98,37 @@
 
 
 
-    <section id="services"> <!-- services section -->
-        <div class="textContent-cn">
-            <h3 >
-                hello
+    <section class="sevices" id="services"> <!-- services section -->
+        <div class="textContent-cn d-flex flex-column align-items-center">
+            <h3 class="d-inline-block mt-3 p-1 text-capitalize text-dark">
+                offered services
             </h3>
 
-            <p>
-                dfdsfsqg
+            <p class="text-dark text-center">
+                <span class="text-capitalize">our</span> services are designed to create high-performance, scalable, visually stunning websites and mobile apps that meet your business goals. Whether you're starting from scratch or revamping an existing site, we deliver tailored solutions that ensure a seamless user experience across all devices.
             </p>
 
         </div>
 
-        <div class="services_cards_cn">
-            
+        <div class="services_cards_cn d-flex m-3 justify-content-center p-2 ">
+            <div class="service-card m-2 rounded bg-light ">
+                <div class=" d-flex justify-content-center mt-1"><img draggable="false" class="m-1" src="assets/media/img/web.png" alt="web"><h4 class="m-2 text-capitalize">web development</h4></div>
+                <p class="text-center p-1">
+                    <span class="text-capitalize">we</span> specialize in creating fully responsive websites that adapt beautifully to any screen size, ensuring an optimal viewing experience on desktops, tablets, and mobile devices.
+                </p>
+            </div>
+            <div class="service-card m-2 rounded bg-light">
+                <div class=" d-flex justify-content-center mt-1"><img draggable="false" class="m-1" src="assets/media/img/mobile.png" alt="mobile"> <h4 class="m-2 text-capitalize">mobile development</h4></div>
+                <p class="text-center p-1">
+                    <span class="text-capitalize">we</span> build native apps for both iOS and Android platforms, ensuring maximum performance and seamless integration with device features.
+                </p>
+            </div>
+            <div class="service-card m-2 rounded bg-light">
+                <div class=" d-flex justify-content-center mt-1"><img draggable="false" class="m-1" src="assets/media/img/brush.png" alt="brush"> <h4 class="m-2 text-capitalize">ux/ui design</h4></div>
+                <p class="text-center p-1">
+                    <span class="text-capitalize">we</span> create <span class="text-uppercase">gui</span> representing your audience, ensuring all design decisions are based on user needs and behavior.
+                </p>
+            </div>
         </div>
     </section>
 
