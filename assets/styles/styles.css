@@ -207,7 +207,6 @@ section div:last-child .skills_cn .skill-card span {
 
 
 .sevices .services_cards_cn .service-card {
-    background-color: teal;
     width: 60%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     
@@ -286,44 +285,24 @@ section div:last-child .skills_cn .skill-card span {
 
 
 @media (max-width: 580px) {
-    .sevices .services_cards_cn {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
+    .tech_section .tecks_list  {
+        grid-template-columns: 250px;
+        gap: 20px;
     }
-
-    .sevices .services_cards_cn .service-card p {
-        font-size: 14px !important;
-     }
-
-     .sevices .services_cards_cn .service-card div h4 {
-        font-size: 17px !important;
-     }
  
 
 }
 
 @media (min-width: 581px) and (max-width: 750px) {
-    .sevices .services_cards_cn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-     }
- 
-     .sevices .services_cards_cn .service-card p {
-         font-size: 16px !important;
-      }
- 
-      .sevices .services_cards_cn .service-card div h4 {
-         font-size: 18px !important;
-      }
-  
+    .tech_section .tecks_list  {
+        grid-template-columns: 250px;
+        gap: 20px;
+    }
 }
 
 @media (min-width: 751px) and (max-width: 950px) {
     .tech_section .tecks_list  {
-
-        grid-template-columns: 250px 250px ;
+        grid-template-columns: 250px 250px 250px;
         gap: 20px;
     }
     
