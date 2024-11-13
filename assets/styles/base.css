@@ -22,9 +22,11 @@ h1 {
 }
 
 h3 {
+    display: inline-block;
     font-size: 32px !important;
     font-weight: 500 !important;
     font-family: var(--font_poppins);
+    border-bottom: solid var(--Mountain_Meadow) 2px !important;
 }
 
 h4 {
