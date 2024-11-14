@@ -52,8 +52,3 @@ a {
     text-decoration: none !important;
 }
 
-span {
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    font-family: var(--font_poppins);
-}
