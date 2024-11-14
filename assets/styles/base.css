@@ -20,40 +20,40 @@ html {
 }
 
 h1 {
-    font-size: 59px !important;
+    font-size: var(--fs_Large) !important;
     font-weight: 700 !important;
     font-family: var(--font_poppins);
 }
 
 h3 {
     display: inline-block;
-    font-size: 32px !important;
+    font-size: var(--fs_Big) !important;
     font-weight: 500 !important;
     font-family: var(--font_poppins);
     border-bottom: solid var(--Mountain_Meadow) 2px !important;
 }
 
 h4 {
-    font-size: 20px !important;
+    font-size: var(--fs_Medium) !important;
     font-weight: 400 !important;
     font-family: var(--font_poppins);
 }
 
 p {
-    font-size: 18px !important;
+    font-size: var(--fs_Normal) !important;
     font-weight: 400 ;
     font-family: var(--font_Montserrat);
 }
 
 a {
-    font-size: 15px !important;
+    font-size: var(--fs_Small) !important;
     font-weight: 500 !important;
     font-family: var(--font_Montserrat);
     text-decoration: none !important;
 }
 
 label {
-    font-size: 15px !important;
+    font-size: var(--fs_Small) !important;
     font-weight: 600 !important;
 
 }

@@ -7,7 +7,7 @@ nav {
 
 nav .container-fluid .navbar-list ul:first-child li .nav-link {
     margin: 0 10px;
-    font-size: 15px;
+    font-size: var(--fs_Small);
     font-weight: 600;
     text-transform: capitalize;
 } 
@@ -110,7 +110,7 @@ section div:last-child .skills_cn {
 }
 
 section div:last-child .skills_cn .skill-card {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    box-shadow: var(--ComponentShadow);
 }
 
 section div:last-child .skills_cn .skill-card img {
@@ -118,7 +118,7 @@ section div:last-child .skills_cn .skill-card img {
 }
 
 section div:last-child .skills_cn .skill-card span {
-    font-size: 15px;
+    font-size: var(--fs_Small);
     font-weight: 400;
     text-transform: capitalize;
     margin-left: 8px;
@@ -208,12 +208,12 @@ section div:last-child .skills_cn .skill-card span {
 
 .sevices .services_cards_cn .service-card {
     width: 60%;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    box-shadow: var(--ComponentShadow);
     
 }
 
 .sevices .services_cards_cn .service-card p{
-    font-size: 16px !important;
+    font-size: var(--fs_Small) !important;
     
 }
 
@@ -245,11 +245,11 @@ section div:last-child .skills_cn .skill-card span {
      }
  
      .sevices .services_cards_cn .service-card p {
-         font-size: 16px !important;
+         font-size: var(--fs_Small) !important;
       }
  
       .sevices .services_cards_cn .service-card div h4 {
-         font-size: 18px !important;
+         font-size: var(--fs_Normal) !important;
       }
   
 }
@@ -280,7 +280,7 @@ section div:last-child .skills_cn .skill-card span {
    justify-content: center;
    border-radius: 10px;
    padding: 10px;
-   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+   box-shadow: var(--ComponentShadow);
 }
 
 
@@ -331,7 +331,7 @@ section div:last-child .skills_cn .skill-card span {
 
 
 .contact_section .contact_items_list div:first-child , .contact_section .contact_items_list div:last-child {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    box-shadow: var(--ComponentShadow);
 }
 
 
