@@ -275,7 +275,7 @@ section div:last-child .skills_cn .skill-card span {
 }
 
 .tech_section .tecks_list .tech_element{
-    background-color: #E9EED9;
+    background-color:transparent;
     display: flex;
    justify-content: center;
    border-radius: 10px;
@@ -317,3 +317,15 @@ section div:last-child .skills_cn .skill-card span {
     }
     
 }
+
+
+.projects .project_section_header {
+    margin-top: 55px;
+}
+
+.projects .project_section_header ul li .linkitem {
+    color: var(--Shark);
+    font-size: 17px !important;
+}
+
+
