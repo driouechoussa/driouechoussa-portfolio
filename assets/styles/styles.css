@@ -354,3 +354,7 @@ button[type="submit"] {
     font-weight: 600;
     border: none;
 }
+
+button[type="submit"]:hover {
+    background-color: var(--Mountain_Meadow_op);
+}
