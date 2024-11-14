@@ -52,3 +52,8 @@ a {
     text-decoration: none !important;
 }
 
+label {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+
+}

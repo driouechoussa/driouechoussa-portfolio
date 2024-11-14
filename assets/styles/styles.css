@@ -329,3 +329,26 @@ section div:last-child .skills_cn .skill-card span {
 }
 
 
+
+.contact_section .contact_items_list div:first-child , .contact_section .contact_items_list div:last-child {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+
+
+
+input::placeholder , textarea::placeholder {
+    text-transform: capitalize;
+}
+
+
+textarea{
+    height:200px ;
+}
+
+button[type="submit"] {
+    background-color: var(--Mountain_Meadow);
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+}
