@@ -93,13 +93,7 @@ header .hero div .hero-buttons .contact-link:hover {
 
 
 
-section div:last-child .about-text .section_title {
-   
-    display: inline-block;
-    border-bottom: 2px solid var(--Mountain_Meadow);
-    color: var(--Shark);
-    
-}
+
 
 
 
@@ -358,3 +352,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: var(--Mountain_Meadow_op);
 }
+
+
+

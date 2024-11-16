@@ -30,7 +30,6 @@ h3 {
     font-size: var(--fs_Big) !important;
     font-weight: 500 !important;
     font-family: var(--font_poppins);
-    border-bottom: solid var(--Mountain_Meadow) 2px !important;
 }
 
 h4 {
@@ -38,6 +37,15 @@ h4 {
     font-weight: 400 !important;
     font-family: var(--font_poppins);
 }
+
+h5 {
+    font-size: var(--fs_Small) !important;
+    font-weight: 500 !important;
+    font-family: var(--font_poppins);
+}
+
+
+
 
 p {
     font-size: var(--fs_Normal) !important;
@@ -59,3 +67,8 @@ label {
 }
 
 
+.heading_underLine {
+    padding-bottom: 2px;
+    display: inline-block;
+    border-bottom: 2px var(--Mountain_Meadow) solid ;
+}
