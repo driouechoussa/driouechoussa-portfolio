@@ -43,7 +43,6 @@
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#services">services</a></li>
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#projects">projects</a></li>
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#certificates">certificates</a></li>
-                    <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="">blogs</a></li>
                     <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#contact">contact</a></li>
                 </ul>
 
@@ -169,14 +168,10 @@
         </div>
         <div class="cert_list w-75 m-auto  mt-3">
             <div class="cert_element m-2">
-                <img draggable="false" width="200" class="rounded " src="assets/media/img/certificates/cert1.png" alt="cert_cover">
+                <img  draggable="false" width="200" class="cert_cover rounded " src="assets/media/img/certificates/cert1.png" alt="cert_cover">
             <h4 class="cert_title text-center text-dark">Lorem ipsum dolor sit amet consectetur</h4>
             <span class="prouvider text-secondary text-capitalize text-center d-inline-block w-100 ">udemy</span>
             </div>
-        </div>
-
-        <div class="cert_preview">
-            <img data-sert-src="" src="" alt="certificate">
         </div>
     </section>
 
@@ -278,7 +273,6 @@
                 <a href="#services"><h5 class="text-light text-capitalize">services</h5></a>
                 <a href="#projects"><h5 class="text-light text-capitalize">projects</h5></a>
                 <a href="#certificates"><h5 class="text-light text-capitalize">certificates</h5></a>
-                <a href="#blogs"><h5 class="text-light text-capitalize">blogs</h5></a>
                 <a href="#contact"><h5 class="text-light text-capitalize">contact</h5></a>
             </div>
             <!-- Grid column -->
@@ -316,7 +310,13 @@
     <!-- Footer -->
   
 
-
+    <div id="cert_preview" class="cert_preview">
+        <div class="d-flex justify-content-between w-50 p-5">
+            <h4 class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing </h4>
+            <span class="bg-secondary rounded" onclick="closeCertPreview()"><img src="assets/media/icons/close.ico" alt="close"></span>
+        </div>
+        <img draggable="false" width="550" class="rounded" data-sert-src="" src="assets/media/img/certificates/cert1.png" alt="certificate"> 
+    </div>
 
 
 
