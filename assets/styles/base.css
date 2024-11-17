@@ -66,6 +66,9 @@ label {
 
 }
 
+select {
+    border: solid 2px #fff;
+}
 
 .heading_underLine {
     padding-bottom: 2px;

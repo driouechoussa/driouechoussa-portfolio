@@ -203,8 +203,9 @@ section div:last-child .skills_cn .skill-card span {
 .sevices .services_cards_cn .service-card {
     width: 60%;
     box-shadow: var(--ComponentShadow);
-    
+
 }
+
 
 .sevices .services_cards_cn .service-card p{
     font-size: var(--fs_Small) !important;
@@ -260,7 +261,7 @@ section div:last-child .skills_cn .skill-card span {
 
 
 
-.tech_section .tecks_list  {
+/* .tech_section .tecks_list  {
     display: grid;
     grid-template-columns: 250px 250px 250px 250px;
     gap: 20px;
@@ -310,7 +311,7 @@ section div:last-child .skills_cn .skill-card span {
         gap: 20px;
     }
     
-}
+} */
 
 
 .projects .project_section_header {
@@ -320,6 +321,42 @@ section div:last-child .skills_cn .skill-card span {
 .projects .project_section_header ul li .linkitem {
     color: var(--Shark);
     font-size: 17px !important;
+}
+
+
+.project_cards_cn {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 270px 270px 270px 270px;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.project_cards_cn .project_card {
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.project_cards_cn .project_card .project_statut {
+    width: 80px;
+    text-align: center;
+    background-color: #3b89ff;
+}
+
+section .cert_list  {
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px;
+    justify-items: center;
+}
+
+
+section .cert_list .cert_element {
+    padding: 10px;
+}
+
+section .cert_list .cert_element .cert_title {
+    padding-top: 5px;
 }
 
 
