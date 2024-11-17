@@ -377,7 +377,14 @@ section .cert_list .cert_element .cert_title {
 
 .cert_preview div span{
     cursor: pointer;
+    background-color: var(--Gray_Chateau);
+    
 }
+
+.cert_preview div span:hover{
+    background-color: var(--Gray_Chateau_op);
+}
+
 
 
 
@@ -410,33 +417,6 @@ button[type="submit"]:hover {
     background-color: var(--Mountain_Meadow_op);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Fullscreen loading div */
 #loading {
     position: fixed;
     top: 0;
@@ -458,6 +438,7 @@ button[type="submit"]:hover {
     width: 80px;
     height: 80px;
     animation: spin 1s linear infinite; /* Spin animation */
+ 
   }
   
   /* Spinner keyframes for rotation */
