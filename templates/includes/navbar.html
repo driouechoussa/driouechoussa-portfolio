@@ -1,0 +1,29 @@
+{% load static %}
+<nav id="navBar" class="navbar w-100 navbar-expand-lg navbar-dark bg-dark ps-5 px-5"> <!-- navbar -->
+        <div class="container-fluid">
+            <a draggable="false" class="navbar-brand" href="{% url 'home' %}"><img draggable="false" width="40" src="{% static '/media/img/logo.png' %}" alt="logo" srcset=""></a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-toggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="menu-toggle" class="navbar-list navbar-collapse collapse">
+                <ul class="navbar-nav  m-auto mb-3 mb-lg-0">
+                    <li draggable="false" class="nav-item active" aria-current="page"><a draggable="false" class="nav-link" href="#header">home</a></li>
+                    <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#about">about</a></li>
+                    <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#services">services</a></li>
+                    <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#projects">projects</a></li>
+                    <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#certificates">certificates</a></li>
+                    <li draggable="false" class="nav-item"><a draggable="false" class="nav-link" href="#contact">contact</a></li>
+                </ul>
+
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://github.com/driouechoussa"><img class="rounded " width="26" draggable="false"  src="{% static 'media/icons/github.ico' %}" alt="github"></a></li>
+                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://x.com/driouechoussa"><img class="rounded" width="26" draggable="false"  src="{% static 'media/icons/twitter.ico' %}" alt="twitter"></a></li>
+                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://www.instagram.com/driouechoussa/"><img class="rounded" width="26" draggable="false"  src="{% static 'media/icons/instagram.ico' %}" alt="instagram"></a></li>
+                    <li class="nav-item"><a draggable="false" target="_blank" class="nav-link" href="https://www.linkedin.com/in/oussama-driouech-b47799273/"><img class="rounded" width="26" draggable="false"  src="{% static 'media/icons/linkedin.ico' %}" alt="linkedin"></a></li>
+                </ul>
+            </div>
+        </div>
+       </nav>   

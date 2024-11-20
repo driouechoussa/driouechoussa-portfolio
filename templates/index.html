@@ -1,0 +1,305 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oussama Driouech</title>
+
+    <!-- set a brief summary of a web page’s content -->
+    <meta name="auther" content="Oussama Driouech">
+    <meta name="description" content="Welcome to my portfolio website. Explore my web development, design, and creative projects. See how I bring ideas to life with modern web technologies and innovative designs.">
+    <meta name=" theme-color" content="#24262A">
+
+    <!-- OG meta -->
+    <meta property="og:site_name" content="Oussama Driouech" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="Welcome to my portfolio website. Explore my web development, design, and creative projects. See how I bring ideas to life with modern web technologies and innovative designs."/> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter-->
+
+    <!-- favicon -->
+     <link rel="shortcut icon" href="{% static 'media/icons/favicon.ico' %}" type="image/x-icon">
+    <!-- link external files (css , js ..) -->
+     <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+     <link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}">
+</head>
+<body >
+    
+    <header id="header"> <!-- header -->
+       {% include "includes/navbar.html" %}
+
+       <div class="hero container-fluid d-flex align-items-center ps-5">
+        <div class="row h-50 w-50">
+            <h1 class="text-light">
+                <span class="text-capitalize">hi!</span> i'm <span class="text-capitalize">oussama</span>,
+                a <span class="text-capitalize">software developer</span>
+            </h1>
+            <div class="hero-buttons mt-5">
+                <button type="button" class="btn text-light ps-4 px-4 pt-2 pb-2 text-capitalize">get my <span class="text-uppercase">cv</span></button>
+                <a draggable="false" href="#contact" class="contact-link ms-4 ps-2 px-4 pt-2 pb-2 text-decoration-none text-capitalize" >contact me</a>
+            </div>
+        </div>
+       </div>
+    </header>
+
+    <section id="about" class="container-fluid bg-light  d-flex align-items-center p-5 justify-content-between"> <!-- about section -->
+        <div class="pic_cn " >
+            <img draggable="false" class="rounded" width="300" src="assets/media/img/overview-photo.png" alt="overview_picture">
+        </div>
+        <div class="col-6">
+          <div class="about-text  ">
+            <h3 class="section_title text-capitalize heading_underLine">
+                about me
+            </h3>
+            <p class="pt-3 pb-3">
+                 I am a dedicated and hardworking person who believes in honesty and good working relationships. I have extensive experience in this field for 5 years.I can create modern and responsive websites and mobile applications for all devices, it will be a great pleasure if you allow me to work on your project.
+            </p>
+          </div>
+
+          <div class="skills_cn">
+           <div class="skill-card  p-2 mt-2 rounded d-flex align-items-center"><img class="rounded-2" draggable="false" width="30" src="assets/media/icons/code-block.ico" alt="codeblock"><span>problem solving</span></div>
+           <div class="skill-card  p-2 mt-2 rounded d-flex align-items-center"><img class="rounded-2" draggable="false" width="30" src="assets/media/icons/time.ico" alt=""><span>managing time</span></div>
+           <div class="skill-card  p-2 mt-2 rounded d-flex align-items-center"><img class="rounded-2" draggable="false" width="30" src="assets/media/icons/code.ico" alt="code"><span>programming principles</span></div>
+           <div class="skill-card  p-2 mt-2 rounded d-flex align-items-center"><img class="rounded-2" draggable="false" width="30" src="assets/media/icons/debug.ico" alt="debug"><span>debugging</span></div>
+          </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="sevices" id="services"> <!-- services section -->
+        <div class="textContent-cn d-flex flex-column align-items-center">
+            <h3 class=" mt-3 p-1 text-capitalize text-dark mt-5 mb-3 heading_underLine">
+                offered services
+            </h3>
+
+            <p class="text-dark text-center">
+                <span class="text-capitalize">our</span> services are designed to create high-performance, scalable, visually stunning websites and mobile apps that meet your business goals. Whether you're starting from scratch or revamping an existing site, we deliver tailored solutions that ensure a seamless user experience across all devices.
+            </p>
+
+        </div>
+
+        <div class="services_cards_cn d-flex m-3 justify-content-center p-2 ">
+            <div class="service-card m-2 rounded bg-light ">
+                <div class=" d-flex justify-content-center mt-1"><img draggable="false" class="m-1" src="assets/media/img/web.png" alt="web"><h4 class="m-2 text-capitalize">web development</h4></div>
+                <p class="text-center p-1">
+                    <span class="text-capitalize">we</span> specialize in creating fully responsive websites that adapt beautifully to any screen size, ensuring an optimal viewing experience on desktops, tablets, and mobile devices.
+                </p>
+            </div>
+            <div class="service-card m-2 rounded bg-light">
+                <div class=" d-flex justify-content-center mt-1"><img draggable="false" class="m-1" src="assets/media/img/mobile.png" alt="mobile"> <h4 class="m-2 text-capitalize">mobile development</h4></div>
+                <p class="text-center p-1">
+                    <span class="text-capitalize">we</span> build native apps for both iOS and Android platforms, ensuring maximum performance and seamless integration with device features.
+                </p>
+            </div>
+            <div class="service-card m-2 rounded bg-light">
+                <div class=" d-flex justify-content-center mt-1"><img draggable="false" class="m-1" src="assets/media/img/brush.png" alt="brush"> <h4 class="m-2 text-capitalize">ux/ui design</h4></div>
+                <p class="text-center p-1">
+                    <span class="text-capitalize">we</span> create <span class="text-uppercase">gui</span> representing your audience, ensuring all design decisions are based on user needs and behavior.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="projects d-flex flex-column align-items-center" id="projects" >
+        <div class="project_section_header w-100 d-flex justify-content-between align-items-center ps-5 px-5">
+            <h3 class="text-capitalize text-dark heading_underLine">projects</h3>
+             <ul class="d-flex justify-content-between align-items-center p-2">
+              <li class="mt-1 mb-1 ms-4 mx-3 text-capitalize"><a class="linkitem" href="#">Web applications</a></li>
+              <li class="mt-1 mb-1 ms-4 mx-3 text-capitalize"><a class="linkitem" href="#">mobile application</a></li>
+              <li class="mt-1 mb-1 ms-4 mx-3 text-capitalize"><a class="linkitem" href="#">deigns</a></li>
+            </ul>
+        </div>
+
+        <div class="project_cards_cn w-75">
+            <div class="project_card bg-light rounded">
+                <div class="project_cover position-relative">
+                    <img draggable="false" width="250" class="img_cover rounded" src="assets/media/img/projects/cover1.png" alt="cover">
+                </div>
+                <h5 class="project_statut p-1 rounded text-capitalize text-light mt-2">completed</h5>
+                <h4 class="card_title mb-3">Lorem ipsum dolor sit amet consectetur </h4>
+                <span><a class="text-capitalize" href="">view details</a></span>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <section class="cert_section d-flex flex-column align-items-center" id="certificates"> <!-- certificates -->
+        <div class="textContent-cn w-75 d-flex flex-column align-items-center">
+            <h3 class="mt-3 p-1 text-capitalize text-dark mt-5 mb-3 heading_underLine">
+                certificates
+            </h3>
+            <p class="text-dark text-center">
+              <span class="text-capitalize">proof</span> of my qualifications and commitment to professional excellence.
+            </p>
+        </div>
+        <div class="cert_list w-75 m-auto  mt-3">
+            <div class="cert_element m-2">
+                <img  draggable="false" width="200" class="cert_cover rounded " src="assets/media/img/certificates/cert1.png" alt="cert_cover">
+            <h4 class="cert_title text-center text-dark">Lorem ipsum dolor sit amet consectetur</h4>
+            <span class="prouvider text-secondary text-capitalize text-center d-inline-block w-100 ">udemy</span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="contact_section d-flex flex-column align-items-center bg-light" id="contact"> <!-- contact -->
+        <div class="textContent-cn w-75 d-flex flex-column align-items-center">
+            <h3 class="mt-3 p-1 text-capitalize text-dark mt-5 mb-3 heading_underLine">
+                contact
+            </h3>
+            <p class="text-dark text-center">
+              <span class="text-capitalize">have</span> a project in mind or want to say hello? I’d love to hear from you! 
+
+            </p>
+        </div>
+        <div class="contact_items_list w-75 m-auto p-3  mt-3 d-flex justify-content-evenly ">
+            <div class="email_item w-25 bg-light d-flex align-items-center p-1 rounded bg-white">
+                <img draggable="false" class="ps-1" src="assets/media/icons/email.ico" alt="email">
+                <a class="text-dark ps-3" href="mailto:thedriwsh@gmail.com">thedriwsh@gmail.com</a>
+            </div>
+            <div class="email_item w-25 bg-light d-flex align-items-center p-1 rounded bg-white">
+                <img draggable="false" class="ps-1" src="assets/media/icons/phone.ico" alt="phone">
+                <a class="text-dark ps-3" href="tel:212603427204">+212 603-427204</a>
+            </div>
+        </div>
+
+        <div class="contact_form w-50 mb-5">
+            <form class="d-flex flex-column"  action="" method="post">
+                <div class="fullName d-flex flex-row">
+                    <div class="form-group w-50 p-3">
+                        <label class="ms-1 text-capitalize" for="firstName">first name</label>
+                        <input class="form-control mt-1" placeholder="enter your first name" type="text" name="firstName">
+                    </div>
+        
+                    <div class="form-group w-50 p-3">
+                        <label class="ms-1 text-capitalize" for="lastName">last name</label>
+                        <input class="form-control mt-1" placeholder="enter your last name" type="text" name="lastName">
+                    </div>
+                </div>
+
+                <div class="form-group p-3">
+                    <label class="ms-1 text-capitalize" for="email">email</label>
+                    <input class="form-control mt-1" placeholder="enter your email" type="email" name="email">
+                </div>
+
+                <div class="form-group p-3">
+                    <label class="ms-1 text-capitalize" for="messageText">your message</label>
+                    <textarea name="messageText" cols="10" class="form-control mt-1 " placeholder="enter your message" id=""></textarea>
+                </div>
+
+                <button class="m-3 p-2 text-capitalize text-light rounded" type="submit">send</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white bg-dark">
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <img class="mt-1 mb-3" width="45" src="assets/media/img/logo.png" alt="logo">
+             
+              <p>
+                <span class="text-capitalize">thanks</span> for visiting! hope to see you again soon. <span class="text-capitalize">g</span>oodbye!
+                
+              </p>
+
+              <select class="bg-dark rounded p-1 ps-3 text-capitalize text-light" name="" id="">
+                <option value="en">english</option>
+                <option value="ar">arab</option>
+                <option value="es">spanish</option>
+                <option value="fr">french</option>
+              </select>
+              
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h4 class="heading text-capitalize mt-3 mb-3 heading_underLine">links</h4>
+                <a href="#about"><h5 class="text-light text-capitalize">about</h5></a>
+                <a href="#services"><h5 class="text-light text-capitalize">services</h5></a>
+                <a href="#projects"><h5 class="text-light text-capitalize">projects</h5></a>
+                <a href="#certificates"><h5 class="text-light text-capitalize">certificates</h5></a>
+                <a href="#contact"><h5 class="text-light text-capitalize">contact</h5></a>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h4 class="heading text-capitalize mt-3 mb-3 heading_underLine">projects</h4>
+              <a href=""><h5 class="text-light text-capitalize">xxx</h5></a>
+                <a href=""><h5 class="text-light text-capitalize">xxx</h5></a>
+                
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="contact_link_cn col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h4 class="heading text-capitalize mt-3 mb-3 heading_underLine">contact</h4>
+              <h5 class="text-capitalize mb-1">marrakech, 40050, morocco</h5>
+              <h5 class="mt-3">contact@oussamadriouech.com</h5>
+              <h5 class="mt-3">+212 603-427204</h5>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-3 mt-5">
+        © 2024 Oussama Driouech. All rights reserved
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  
+
+    <div id="cert_preview" class="cert_preview">
+        <div class="d-flex justify-content-between w-50 p-5">
+            <h4 class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing </h4>
+            <span class="rounded" onclick="closeCertPreview()"><img src="assets/media/icons/close.ico" alt="close"></span>
+        </div>
+        <img draggable="false" width="550" class="rounded" data-sert-src="" src="assets/media/img/certificates/cert1.png" alt="certificate"> 
+    </div>
+
+
+
+
+<!-- \end{code} -->
+
+ 
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>
