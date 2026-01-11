@@ -1,0 +1,32 @@
+:root {
+    /*
+    primeries colors
+    */
+    --Amber: rgb(255, 193, 7);
+    --Shark: hsl(210, 11%, 15%);
+    --Shark_op: hsla(210, 11%, 15%, 0.692);
+    
+    --Gray_Chateau: rgb(157, 163, 168); /*#9DA3A8*/ 
+    --Gray_Chateau_op: rgba(157, 163, 168, 0.78); /*#9DA3A8c7*/
+    --light_gray: rgb(199, 200, 201);
+
+    /*
+    typography
+    (400/ 500/ 600/ 700)
+    */
+    --Fw_Bold: 700;
+    --Fw_Semi-Bold: 600;
+    --Fw_Medium: 500;
+    --Fw_Regular: 400;
+    /*
+     Fonts
+    */
+    --font_poppins:'poppins' , sans-serif !important;
+
+    /* Font Sizes (15px , 18px, 20px . 32px , 59px ) */
+    --fs_Small: 15px;
+    --fs_Normal: 18px;
+    --fs_Medium: 20px;
+    --fs_Big: 32px;
+    --fs_Large: 55px; 
+}
