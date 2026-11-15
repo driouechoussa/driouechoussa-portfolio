@@ -2,6 +2,7 @@
 
 namespace App\Support;
 
+use App\Models\Setting;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
@@ -61,12 +62,13 @@ final class PortfolioData
 
     /**
      * Profile from config/portfolio.php with absolute URLs for its files.
+     * The CV uploaded in the admin panel replaces the default one.
      */
     public static function profile(): array
     {
         $profile = config('portfolio.profile');
         $profile['photo'] = Media::url($profile['photo']);
-        $profile['cv'] = Media::url($profile['cv']);
+        $profile['cv'] = Media::url(Setting::get(Setting::CV_PATH) ?: $profile['cv']);
 
         return $profile;
     }
