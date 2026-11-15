@@ -15,7 +15,7 @@ return [
             'body' => ['When you send a message, the following is stored so I can read and answer it:'],
             'list' => [
                 'your name and email address',
-                'the subject, budget and message you choose to send',
+                'the subject and message you choose to send',
                 'the language of the page you used',
                 'your IP address and browser type, only to block spam and abuse',
             ],

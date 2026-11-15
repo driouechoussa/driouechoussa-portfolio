@@ -61,15 +61,6 @@
                   <option value="other" @selected(old('subject') === 'other') data-i18n="form.opt.other">{{ __('ui.form.opt.other') }}</option>
                 </select>
               </div>
-              <fieldset class="col-12 field">
-                <legend class="form-label-ui" data-i18n="form.budget">{{ __('ui.form.budget') }}</legend>
-                <div class="budget-options">
-                  <input type="radio" name="budget" id="b1" value="lt1k" @checked(old('budget', '1-5k') === 'lt1k')><label class="chip" for="b1" data-i18n="form.b1">{{ __('ui.form.b1') }}</label>
-                  <input type="radio" name="budget" id="b2" value="1-5k" @checked(old('budget', '1-5k') === '1-5k')><label class="chip" for="b2" data-i18n="form.b2">{{ __('ui.form.b2') }}</label>
-                  <input type="radio" name="budget" id="b3" value="5-10k" @checked(old('budget', '1-5k') === '5-10k')><label class="chip" for="b3" data-i18n="form.b3">{{ __('ui.form.b3') }}</label>
-                  <input type="radio" name="budget" id="b4" value="gt10k" @checked(old('budget', '1-5k') === 'gt10k')><label class="chip" for="b4" data-i18n="form.b4">{{ __('ui.form.b4') }}</label>
-                </div>
-              </fieldset>
               <div class="col-12 field @error('message') has-error @enderror">
                 <label class="form-label-ui" for="message" data-i18n="form.message">{{ __('ui.form.message') }}</label>
                 <textarea class="input-ui" id="message" name="message" required minlength="20" data-i18n-placeholder="form.messagePh" placeholder="{{ __('ui.form.messagePh') }}" maxlength="5000" aria-describedby="messageError" @error('message') aria-invalid="true" @enderror>{{ old('message') }}</textarea>

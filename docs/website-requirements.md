@@ -85,7 +85,7 @@ A personal portfolio for **Oussama Driouech**, a full-stack web developer. It mu
 **Contact**
 - ✅ Page hero
 - ✅ Contact details: email, phone, location, social links
-- ✅ Form: name, email, subject, budget, message
+- ✅ Form: name, email, subject, message
 - 🟡 Form opens the visitor's email app (`mailto:`); it does not send from the server
 
 ### On every page

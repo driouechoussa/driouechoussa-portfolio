@@ -9,10 +9,9 @@ class ContactMessage extends Model
 {
     public const SUBJECTS = ['project', 'freelance', 'job', 'other'];
 
-    public const BUDGETS = ['lt1k', '1-5k', '5-10k', 'gt10k'];
 
     protected $fillable = [
-        'name', 'email', 'subject', 'budget', 'message', 'locale', 'ip_address', 'user_agent', 'read_at',
+        'name', 'email', 'subject', 'message', 'locale', 'ip_address', 'user_agent', 'read_at',
     ];
 
     protected function casts(): array

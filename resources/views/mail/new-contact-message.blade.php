@@ -4,7 +4,6 @@
 **Name:** {{ $contactMessage->name }}<br>
 **Email:** {{ $contactMessage->email }}<br>
 **Subject:** {{ $contactMessage->subject }}<br>
-**Budget:** {{ $contactMessage->budget ?? '—' }}<br>
 **Language:** {{ $contactMessage->locale }}
 
 <x-mail::panel>

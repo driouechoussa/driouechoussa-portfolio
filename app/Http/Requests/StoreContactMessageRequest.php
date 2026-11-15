@@ -27,7 +27,6 @@ class StoreContactMessageRequest extends FormRequest
             'name' => ['required', 'string', 'max:100'],
             'email' => ['required', 'string', 'email:rfc', 'max:150'],
             'subject' => ['required', Rule::in(ContactMessage::SUBJECTS)],
-            'budget' => ['nullable', Rule::in(ContactMessage::BUDGETS)],
             'message' => ['required', 'string', 'min:20', 'max:5000'],
         ];
     }

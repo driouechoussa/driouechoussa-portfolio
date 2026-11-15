@@ -55,7 +55,6 @@ class ContactMessageResource extends Resource
                 TextEntry::make('email')->copyable()->url(fn (ContactMessage $record) => 'mailto:'.$record->email),
                 TextEntry::make('created_at')->label('Received')->dateTime(),
                 TextEntry::make('subject')->badge(),
-                TextEntry::make('budget')->placeholder('—'),
                 TextEntry::make('locale')->label('Language')->formatStateUsing(fn (string $state) => strtoupper($state)),
                 TextEntry::make('message')->columnSpanFull()->prose(),
                 TextEntry::make('ip_address')->label('IP address')->placeholder('—'),

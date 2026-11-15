@@ -15,7 +15,7 @@ return [
             'body' => ['Lorsque vous envoyez un message, les informations suivantes sont enregistrées afin que je puisse le lire et y répondre :'],
             'list' => [
                 'votre nom et votre adresse e-mail',
-                "l'objet, le budget et le message que vous choisissez d'envoyer",
+                "l'objet et le message que vous choisissez d'envoyer",
                 'la langue de la page utilisée',
                 'votre adresse IP et le type de navigateur, uniquement pour bloquer le spam et les abus',
             ],

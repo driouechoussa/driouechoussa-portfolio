@@ -14,7 +14,6 @@ function validMessage(array $overrides = []): array
         'name' => 'Jane Client',
         'email' => 'jane@example.com',
         'subject' => 'project',
-        'budget' => '1-5k',
         'message' => 'I would like a new website for my business, can we talk?',
     ], $overrides);
 }
