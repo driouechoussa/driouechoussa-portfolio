@@ -10,14 +10,8 @@ App.root = document.body.getAttribute("data-root") || "";
 App.page = document.body.getAttribute("data-page") || "home";
 
 App.components = (function () {
-  // Wordmark: "Driouech" + highlighted "oussa" + blinking caret.
-  // Always left-to-right, even on the Arabic site.
-  var WORDMARK =
-    '<span class="wordmark" dir="ltr" translate="no">' +
-      '<span class="wordmark-a">Driouech</span>' +
-      '<span class="wordmark-b">oussa</span>' +
-      '<span class="wordmark-caret" aria-hidden="true"></span>' +
-    '</span>';
+  // Wordmark. Always left-to-right, even on the Arabic site.
+  var WORDMARK = '<span class="wordmark" dir="ltr" translate="no">Driouechoussa</span>';
 
   var NAV = [
     { key: "home", href: "" },
