@@ -2,24 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Projects;
-use App\Models\Certificates;
-use App\Models\Cv;
-
+use App\Http\Resources\EducationResource;
+use App\Http\Resources\ExperienceResource;
+use App\Http\Resources\PostResource;
+use App\Http\Resources\ProjectResource;
+use App\Models\Education;
+use App\Models\Experience;
+use App\Models\Post;
+use App\Models\Project;
+use App\Support\PortfolioData;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-    function Index()
+    public function __invoke(): View
     {
-        $projects = Projects::limit(8)->get(); 
-        $certificates = Certificates::limit(4)->get();
-        $cv = Cv::all();
-
-        return view('index' , [
-            'projects' => $projects,
-            'certificates' => $certificates,
-            'cv' => $cv
+        return view('pages.home', [
+            'appData' => PortfolioData::make([
+                'projects' => ProjectResource::collection(Project::ordered()->take(6)->get()),
+                'education' => EducationResource::collection(Education::ordered()->get()),
+                'experience' => ExperienceResource::collection(Experience::ordered()->take(6)->get()),
+                'posts' => PostResource::collection(Post::published()->take(3)->get()),
+            ]),
         ]);
     }
 }
