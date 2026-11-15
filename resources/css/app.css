@@ -1,3 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Site stylesheet bundle (built by Vite). Order matters. */
+
+/* Vendor */
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "./vendor/fontawesome/css/all.min.css";
+
+/* Site */
+@import "./site/themes.css";
+@import "./site/main.css";
+@import "./site/animations.css";
+@import "./site/responsive.css";
+@import "./site/additions.css";

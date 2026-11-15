@@ -1,0 +1,108 @@
+/* =========================================================
+   THEMES — design tokens (colors, type, radii, motion)
+   Dark is the default; light overrides the color tokens.
+   ========================================================= */
+
+:root {
+  /* Brand */
+  --primary: #e6a514;
+  --primary-rgb: 230, 165, 20;
+  --primary-hover: #f2b733;
+  --on-primary: #17130e;
+  --dark: #17130e;
+  --secondary: #363637;
+  --white: #ffffff;
+
+  /* Typography */
+  --font-sans: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Sora", "Manrope", system-ui, sans-serif;
+  --font-ar: "Cairo", "Segoe UI", Tahoma, sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
+  --fs-2xl: clamp(1.875rem, 1.4rem + 1.8vw, 2.75rem);
+  --fs-3xl: clamp(2.25rem, 1.5rem + 3vw, 4rem);
+
+  /* Spacing & layout */
+  --section-y: clamp(4.5rem, 8vw, 7.5rem);
+  --header-h: 78px;
+  --gutter: clamp(1rem, 3vw, 1.5rem);
+
+  /* Shape */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 0.2s;
+  --dur: 0.35s;
+  --dur-slow: 0.6s;
+}
+
+/* ---------- Dark theme (default) ---------- */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #17130e;
+  --bg-alt: #1c1711;
+  --surface: #221c15;
+  --surface-2: #2a231a;
+  --surface-3: #332b21;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text: #ffffff;
+  --text-muted: #bdb4a7;
+  --text-soft: #8d857a;
+  --primary-text: #e6a514;
+  --primary-soft: rgba(230, 165, 20, 0.12);
+  --header-bg: rgba(23, 19, 14, 0.72);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.25);
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);
+  --glow: 0 0 0 1px rgba(230, 165, 20, 0.35), 0 18px 50px rgba(230, 165, 20, 0.12);
+  --mock-bg: #2c251c;
+  --mock-line: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Light theme ---------- */
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #faf7f1;
+  --bg-alt: #f3eee4;
+  --surface: #ffffff;
+  --surface-2: #f6f2ea;
+  --surface-3: #ece6da;
+  --border: rgba(23, 19, 14, 0.08);
+  --border-strong: rgba(23, 19, 14, 0.16);
+  --text: #17130e;
+  --text-muted: #363637;
+  --text-soft: #6e6a63;
+  --primary-text: #8a5f00; /* darker amber: WCAG AA (4.5:1+) on every light background */
+  --primary-soft: rgba(230, 165, 20, 0.14);
+  --header-bg: rgba(250, 247, 241, 0.78);
+  --shadow-sm: 0 2px 10px rgba(23, 19, 14, 0.05);
+  --shadow: 0 14px 40px rgba(23, 19, 14, 0.08);
+  --shadow-lg: 0 24px 60px rgba(23, 19, 14, 0.12);
+  --glow: 0 0 0 1px rgba(230, 165, 20, 0.45), 0 18px 50px rgba(230, 165, 20, 0.16);
+  --mock-bg: #f1ebdf;
+  --mock-line: rgba(23, 19, 14, 0.1);
+}
+
+/* Temporary class added while switching theme (fallback when
+   the View Transitions API is not available). */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 0.45s var(--ease), color 0.45s var(--ease),
+    border-color 0.45s var(--ease), fill 0.45s var(--ease), box-shadow 0.45s var(--ease) !important;
+}
