@@ -19,6 +19,14 @@ class PortfolioSeeder extends Seeder
 {
     public function run(): void
     {
+        // Seeding replaces content, so on the live site it only fills an empty
+        // database (first deploy) and never overwrites what was edited in /admin.
+        if (app()->isProduction() && Project::query()->exists()) {
+            $this->command?->warn('Portfolio content already exists: skipped so admin edits are not overwritten.');
+
+            return;
+        }
+
         $data = json_decode(
             file_get_contents(database_path('seeders/data/portfolio.json')),
             true,

@@ -16,6 +16,13 @@ return [
     'name' => env('APP_NAME', 'Laravel'),
 
     /*
+    | Proxies whose X-Forwarded-* headers are trusted (load balancer, Cloudflare,
+    | reverse proxy): "*" for any, or a comma-separated list of IPs/CIDRs.
+    | Needed for HTTPS detection, correct client IPs and rate limiting.
+    */
+    'trusted_proxies' => env('TRUSTED_PROXIES'),
+
+    /*
     |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------

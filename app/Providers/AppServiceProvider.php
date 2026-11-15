@@ -4,7 +4,9 @@ namespace App\Providers;
 
 use App\Support\PortfolioData;
 use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Middleware\TrustProxies;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
@@ -29,6 +31,15 @@ class AppServiceProvider extends ServiceProvider
 
         if ($this->app->isProduction()) {
             URL::forceScheme('https');
+        }
+
+        // Refuse migrate:fresh, db:wipe, etc. on the live database.
+        DB::prohibitDestructiveCommands($this->app->isProduction());
+
+        // Behind a load balancer / reverse proxy (TRUSTED_PROXIES="*" or a list of IPs),
+        // trust its X-Forwarded-* headers so HTTPS and client IPs are detected correctly.
+        if ($proxies = config('app.trusted_proxies')) {
+            TrustProxies::at($proxies === '*' ? '*' : array_map('trim', explode(',', $proxies)));
         }
 
         // Profile details (name, email, socials…) in the current language for every site view.

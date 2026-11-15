@@ -16,11 +16,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->prepend(ForceHttps::class);
 
-        // Behind a load balancer / reverse proxy, set TRUSTED_PROXIES (e.g. "*")
-        // so HTTPS and client IPs are detected correctly.
-        if ($proxies = env('TRUSTED_PROXIES')) {
-            $middleware->trustProxies(at: $proxies === '*' ? '*' : explode(',', $proxies));
-        }
+        // Trusted proxies (TRUSTED_PROXIES) are applied in AppServiceProvider from
+        // config, so they still work when the config is cached in production.
 
         $middleware->web(append: [
             \Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class,
