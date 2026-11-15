@@ -43,8 +43,10 @@ App.components = (function () {
     return map[App.page] || App.page;
   }
 
+  /** Only the networks with a link saved in the admin panel. */
   function socialLinks(extraClass) {
-    return SOCIALS.map(function (s) {
+    var saved = (App.data && App.data.profile && App.data.profile.socials) || {};
+    return SOCIALS.filter(function (s) { return saved[s.key]; }).map(function (s) {
       return '<a class="social-link ' + (extraClass || "") + '" data-profile-href="' + s.key + '" href="#" target="_blank" rel="noopener noreferrer" aria-label="' + s.label + '">' +
         '<i class="' + s.icon + '" aria-hidden="true"></i></a>';
     }).join("");
@@ -134,7 +136,9 @@ App.components = (function () {
               '<h2 class="footer-title" data-i18n="footer.contactTitle"></h2>' +
               '<ul class="footer-contact">' +
                 '<li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a data-profile-href="email" data-profile="email" href="#"></a></li>' +
-                '<li><i class="fa-solid fa-phone" aria-hidden="true"></i><a data-profile-href="phone" data-profile="phone" href="#" dir="ltr"></a></li>' +
+                (App.data && App.data.profile && App.data.profile.phone
+                  ? '<li><i class="fa-solid fa-phone" aria-hidden="true"></i><a data-profile-href="phone" data-profile="phone" href="#" dir="ltr"></a></li>'
+                  : "") +
                 '<li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span data-profile="location"></span></li>' +
               "</ul>" +
             "</div>" +
@@ -168,13 +172,10 @@ App.components = (function () {
     };
     var hrefs = {
       email: "mailto:" + p.email,
-      phone: "tel:" + p.phone.replace(/\s+/g, ""),
-      cv: url(p.cv),
-      linkedin: p.socials.linkedin,
-      instagram: p.socials.instagram,
-      x: p.socials.x,
-      github: p.socials.github
+      phone: "tel:" + (p.phone || "").replace(/\s+/g, ""),
+      cv: url(p.cv)
     };
+    Object.keys(p.socials || {}).forEach(function (k) { hrefs[k] = p.socials[k]; });
 
     root.querySelectorAll("[data-profile]").forEach(function (el) {
       var v = values[el.dataset.profile];

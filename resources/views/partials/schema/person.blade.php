@@ -10,7 +10,7 @@
     'jobTitle' => config('portfolio.profile.job_title'),
     'email' => 'mailto:'.$profile['email'],
     'address' => ['@type' => 'PostalAddress', 'addressLocality' => $profile['location']],
-    'sameAs' => array_values(config('portfolio.profile.socials')),
+    'sameAs' => array_values($profile['socials']),
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}
 </script>
 @endpush

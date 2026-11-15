@@ -17,10 +17,12 @@
               <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
               <span><small data-i18n="contact.email">{{ __('ui.contact.email') }}</small><strong data-profile="email">{{ $profile['email'] }}</strong></span>
             </a>
+            @if (filled($profile['phone']))
             <a class="card-ui contact-card reveal" data-profile-href="phone" href="{{ $profile['href']['phone'] }}">
               <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
               <span><small data-i18n="contact.phone">{{ __('ui.contact.phone') }}</small><strong data-profile="phone" dir="ltr">{{ $profile['phone'] }}</strong></span>
             </a>
+            @endif
             <div class="card-ui contact-card reveal">
               <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
               <span><small data-i18n="contact.location">{{ __('ui.contact.location') }}</small><strong data-profile="location">{{ $profile['location'] }}</strong></span>

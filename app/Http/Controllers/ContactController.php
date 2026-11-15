@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreContactMessageRequest;
 use App\Mail\NewContactMessage;
 use App\Models\ContactMessage;
+use App\Support\ContactDetails;
 use App\Support\Locale;
 use App\Support\PortfolioData;
 use Illuminate\Http\JsonResponse;
@@ -49,10 +50,8 @@ class ContactController extends Controller
      */
     private function notifyOwner(ContactMessage $message): void
     {
-        $recipient = config('portfolio.contact.recipient') ?: config('portfolio.profile.email');
-
         try {
-            Mail::to($recipient)->send(new NewContactMessage($message));
+            Mail::to(ContactDetails::recipient())->send(new NewContactMessage($message));
         } catch (Throwable $e) {
             report($e);
         }

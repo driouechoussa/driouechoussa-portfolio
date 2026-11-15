@@ -19,10 +19,11 @@
         <h1 class="id-name" id="heroName" data-profile="name">{{ $profile['name'] }}</h1>
         <p class="id-title" data-i18n="hero.title">{{ __('ui.hero.title') }}</p>
         <div class="socials">
-          <a class="social-link" data-profile-href="linkedin" href="{{ $profile['href']['linkedin'] }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-          <a class="social-link" data-profile-href="instagram" href="{{ $profile['href']['instagram'] }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-          <a class="social-link" data-profile-href="x" href="{{ $profile['href']['x'] }}" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-          <a class="social-link" data-profile-href="github" href="{{ $profile['href']['github'] }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          @foreach (\App\Support\ContactDetails::SOCIALS as $network => $social)
+            @isset($profile['socials'][$network])
+              <a class="social-link" data-profile-href="{{ $network }}" href="{{ $profile['socials'][$network] }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $social['label'] }}"><i class="{{ $social['icon'] }}" aria-hidden="true"></i></a>
+            @endisset
+          @endforeach
         </div>
         <p class="id-desc" data-i18n="hero.desc">{{ __('ui.hero.desc') }}</p>
         <div class="id-actions">

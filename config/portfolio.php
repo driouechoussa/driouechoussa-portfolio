@@ -50,10 +50,13 @@ return [
     ],
 
     /*
-    | Where contact-form messages are emailed. Defaults to the profile email.
+    | Where contact-form messages are emailed when no email has been saved in
+    | the admin panel (Profile → Contact details). Defaults to the profile email.
+    | verify_email_dns: the admin email must have a domain that accepts mail.
     */
     'contact' => [
         'recipient' => env('CONTACT_RECIPIENT'),
+        'verify_email_dns' => env('CONTACT_VERIFY_EMAIL_DNS', true),
     ],
 
     /*

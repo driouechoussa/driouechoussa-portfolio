@@ -62,11 +62,11 @@ final class PortfolioData
 
     /**
      * Profile from config/portfolio.php with absolute URLs for its files.
-     * The CV uploaded in the admin panel replaces the default one.
+     * Contact details and the CV saved in the admin panel replace the defaults.
      */
     public static function profile(): array
     {
-        $profile = config('portfolio.profile');
+        $profile = array_replace(config('portfolio.profile'), ContactDetails::all());
         $profile['photo'] = Media::url($profile['photo']);
         $profile['cv'] = Media::url(Setting::get(Setting::CV_PATH) ?: $profile['cv']);
 
@@ -81,7 +81,7 @@ final class PortfolioData
     {
         $p = self::profile();
         $locale = app()->getLocale();
-        $pick = fn (array|string $value) => is_array($value) ? ($value[$locale] ?? $value['en']) : $value;
+        $pick = fn (array|string $value) => is_array($value) ? ($value[$locale] ?? $value['en'] ?? '') : $value;
 
         return [
             'name' => $pick($p['name']),
@@ -90,6 +90,7 @@ final class PortfolioData
             'phone' => $p['phone'],
             'location' => $pick($p['location']),
             'photo' => $p['photo'],
+            'socials' => $p['socials'],
             'href' => [
                 'email' => 'mailto:'.$p['email'],
                 'phone' => 'tel:'.preg_replace('/\s+/', '', $p['phone']),
