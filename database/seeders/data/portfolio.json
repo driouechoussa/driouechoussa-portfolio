@@ -1,0 +1,1412 @@
+{
+  "projects": [
+    {
+      "id": "souk-digital",
+      "category": "ecommerce",
+      "title": "Souk Digital",
+      "preview": "shop",
+      "icon": "fa-bag-shopping",
+      "accent": "#e6a514",
+      "year": "2026",
+      "client": "Souk Digital SARL",
+      "duration": {
+        "en": "4 months",
+        "fr": "4 mois",
+        "ar": "4 أشهر"
+      },
+      "role": {
+        "en": "Lead Full-Stack Developer",
+        "fr": "Développeur Full-Stack principal",
+        "ar": "مطور Full-Stack رئيسي"
+      },
+      "stack": [
+        "Laravel",
+        "Vue.js",
+        "MySQL",
+        "Stripe",
+        "Redis"
+      ],
+      "desc": {
+        "en": "A multi-vendor marketplace for Moroccan artisans with secure payments, vendor dashboards and real-time stock.",
+        "fr": "Une marketplace multi-vendeurs pour artisans marocains avec paiements sécurisés, tableaux de bord vendeurs et stock en temps réel.",
+        "ar": "سوق إلكتروني متعدد البائعين للحرفيين المغاربة مع دفع آمن ولوحات تحكم للبائعين ومخزون لحظي."
+      },
+      "overview": {
+        "en": "Souk Digital connects more than 300 independent artisans with customers worldwide. I designed the architecture, built the storefront and the vendor back-office, and integrated payments and shipping.",
+        "fr": "Souk Digital connecte plus de 300 artisans indépendants à des clients du monde entier. J'ai conçu l'architecture, développé la boutique et le back-office vendeurs, puis intégré les paiements et la livraison.",
+        "ar": "تربط Souk Digital أكثر من 300 حرفي مستقل بالزبائن حول العالم. صممت البنية التقنية وطورت واجهة المتجر ولوحة إدارة البائعين، ثم دمجت أنظمة الدفع والشحن."
+      },
+      "challenge": {
+        "en": "Each vendor needed independent inventory, payouts and analytics while customers expected one seamless checkout across several sellers.",
+        "fr": "Chaque vendeur avait besoin d'un inventaire, de versements et d'analyses indépendants, tandis que les clients attendaient un paiement unique et fluide entre plusieurs vendeurs.",
+        "ar": "احتاج كل بائع إلى مخزون ومدفوعات وتحليلات مستقلة، بينما توقع الزبائن عملية دفع واحدة سلسة تشمل عدة بائعين."
+      },
+      "solution": {
+        "en": "I built a split-payment flow with Stripe Connect, an event-driven stock system backed by Redis queues, and a Vue.js storefront optimized for mobile shoppers.",
+        "fr": "J'ai mis en place un paiement fractionné avec Stripe Connect, une gestion de stock événementielle basée sur des files Redis et une boutique Vue.js optimisée pour le mobile.",
+        "ar": "طورت نظام دفع مقسّم عبر Stripe Connect، ونظام مخزون قائم على الأحداث باستخدام طوابير Redis، وواجهة Vue.js محسّنة للتسوق عبر الهاتف."
+      },
+      "results": [
+        {
+          "value": "+180%",
+          "label": {
+            "en": "online sales in 6 months",
+            "fr": "de ventes en ligne en 6 mois",
+            "ar": "نمو المبيعات خلال 6 أشهر"
+          }
+        },
+        {
+          "value": "1.2s",
+          "label": {
+            "en": "average page load",
+            "fr": "temps de chargement moyen",
+            "ar": "متوسط زمن التحميل"
+          }
+        },
+        {
+          "value": "300+",
+          "label": {
+            "en": "active vendors",
+            "fr": "vendeurs actifs",
+            "ar": "بائع نشط"
+          }
+        }
+      ]
+    },
+    {
+      "id": "taskflow",
+      "category": "webapp",
+      "title": "TaskFlow",
+      "preview": "dash",
+      "icon": "fa-list-check",
+      "accent": "#7c9cff",
+      "year": "2026",
+      "client": "TaskFlow Inc.",
+      "duration": {
+        "en": "6 months",
+        "fr": "6 mois",
+        "ar": "6 أشهر"
+      },
+      "role": {
+        "en": "Full-Stack Developer",
+        "fr": "Développeur Full-Stack",
+        "ar": "مطور Full-Stack"
+      },
+      "stack": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Socket.io",
+        "Docker"
+      ],
+      "desc": {
+        "en": "A collaborative project-management SaaS with kanban boards, real-time updates and team analytics.",
+        "fr": "Un SaaS collaboratif de gestion de projet avec tableaux kanban, mises à jour en temps réel et statistiques d'équipe.",
+        "ar": "منصة SaaS تعاونية لإدارة المشاريع مع لوحات كانبان وتحديثات فورية وتحليلات للفرق."
+      },
+      "overview": {
+        "en": "TaskFlow helps distributed teams plan, track and ship work. I developed the real-time collaboration engine, the REST API and most of the front-end interface.",
+        "fr": "TaskFlow aide les équipes distribuées à planifier, suivre et livrer leur travail. J'ai développé le moteur de collaboration temps réel, l'API REST et l'essentiel de l'interface.",
+        "ar": "تساعد TaskFlow الفرق الموزعة على التخطيط والمتابعة وتسليم العمل. طورت محرك التعاون الفوري وواجهة REST API ومعظم الواجهة الأمامية."
+      },
+      "challenge": {
+        "en": "Keeping boards in sync for dozens of simultaneous users without conflicts or lost updates.",
+        "fr": "Garder les tableaux synchronisés pour des dizaines d'utilisateurs simultanés, sans conflits ni pertes de modifications.",
+        "ar": "الحفاظ على تزامن اللوحات لعشرات المستخدمين في الوقت نفسه دون تعارضات أو فقدان للتعديلات."
+      },
+      "solution": {
+        "en": "Optimistic UI updates on the client, WebSocket rooms per board and a server-side ordering strategy that resolves concurrent moves deterministically.",
+        "fr": "Mises à jour optimistes côté client, salons WebSocket par tableau et une stratégie d'ordonnancement serveur qui résout les déplacements concurrents de façon déterministe.",
+        "ar": "تحديثات متفائلة في الواجهة، وغرف WebSocket لكل لوحة، واستراتيجية ترتيب في الخادم تحسم التحركات المتزامنة بشكل حتمي."
+      },
+      "results": [
+        {
+          "value": "12k",
+          "label": {
+            "en": "monthly active users",
+            "fr": "utilisateurs actifs mensuels",
+            "ar": "مستخدم نشط شهريًا"
+          }
+        },
+        {
+          "value": "<80ms",
+          "label": {
+            "en": "real-time sync latency",
+            "fr": "de latence de synchronisation",
+            "ar": "زمن التزامن الفوري"
+          }
+        },
+        {
+          "value": "99.9%",
+          "label": {
+            "en": "uptime",
+            "fr": "de disponibilité",
+            "ar": "نسبة التشغيل"
+          }
+        }
+      ]
+    },
+    {
+      "id": "medbook",
+      "category": "fullstack",
+      "title": "MedBook",
+      "preview": "landing",
+      "icon": "fa-stethoscope",
+      "accent": "#3ddc84",
+      "year": "2025",
+      "client": "MedBook Health",
+      "duration": {
+        "en": "5 months",
+        "fr": "5 mois",
+        "ar": "5 أشهر"
+      },
+      "role": {
+        "en": "Full-Stack Developer",
+        "fr": "Développeur Full-Stack",
+        "ar": "مطور Full-Stack"
+      },
+      "stack": [
+        "Next.js",
+        "NestJS",
+        "PostgreSQL",
+        "Prisma",
+        "Twilio"
+      ],
+      "desc": {
+        "en": "An online appointment platform for clinics with smart scheduling, SMS reminders and patient records.",
+        "fr": "Une plateforme de prise de rendez-vous pour cliniques avec planification intelligente, rappels SMS et dossiers patients.",
+        "ar": "منصة حجز مواعيد للعيادات مع جدولة ذكية وتذكير عبر الرسائل القصيرة وملفات للمرضى."
+      },
+      "overview": {
+        "en": "MedBook lets patients book, reschedule and pay for consultations online while giving clinics a clear view of their daily agenda.",
+        "fr": "MedBook permet aux patients de réserver, reprogrammer et payer leurs consultations en ligne, tout en offrant aux cliniques une vue claire de leur agenda.",
+        "ar": "تتيح MedBook للمرضى حجز الاستشارات وإعادة جدولتها ودفعها عبر الإنترنت، مع منح العيادات رؤية واضحة لجدولها اليومي."
+      },
+      "challenge": {
+        "en": "Missed appointments were costing clinics up to 20% of their revenue, and scheduling was still done by phone.",
+        "fr": "Les rendez-vous manqués coûtaient jusqu'à 20 % du chiffre d'affaires des cliniques, et la planification se faisait encore par téléphone.",
+        "ar": "كانت المواعيد الفائتة تكلف العيادات ما يصل إلى 20% من إيراداتها، وكانت الجدولة لا تزال تتم عبر الهاتف."
+      },
+      "solution": {
+        "en": "A booking engine that respects each doctor's availability, automated SMS reminders and a secure patient portal with role-based access.",
+        "fr": "Un moteur de réservation respectant les disponibilités de chaque médecin, des rappels SMS automatiques et un portail patient sécurisé avec gestion des rôles.",
+        "ar": "محرك حجز يحترم مواعيد كل طبيب، وتذكيرات تلقائية عبر الرسائل القصيرة، وبوابة آمنة للمرضى مع صلاحيات حسب الدور."
+      },
+      "results": [
+        {
+          "value": "-65%",
+          "label": {
+            "en": "missed appointments",
+            "fr": "de rendez-vous manqués",
+            "ar": "انخفاض المواعيد الفائتة"
+          }
+        },
+        {
+          "value": "40+",
+          "label": {
+            "en": "partner clinics",
+            "fr": "cliniques partenaires",
+            "ar": "عيادة شريكة"
+          }
+        },
+        {
+          "value": "4.8/5",
+          "label": {
+            "en": "patient satisfaction",
+            "fr": "satisfaction patients",
+            "ar": "رضا المرضى"
+          }
+        }
+      ]
+    },
+    {
+      "id": "atlas-travel",
+      "category": "frontend",
+      "title": "Atlas Travel",
+      "preview": "landing",
+      "icon": "fa-plane-departure",
+      "accent": "#ff8a5b",
+      "year": "2025",
+      "client": "Atlas Travel Agency",
+      "duration": {
+        "en": "2 months",
+        "fr": "2 mois",
+        "ar": "شهران"
+      },
+      "role": {
+        "en": "Front-End Developer",
+        "fr": "Développeur Front-End",
+        "ar": "مطور واجهات أمامية"
+      },
+      "stack": [
+        "HTML5",
+        "SCSS",
+        "JavaScript",
+        "GSAP",
+        "Bootstrap 5"
+      ],
+      "desc": {
+        "en": "An immersive, multilingual travel agency website with animated destination guides and trip builders.",
+        "fr": "Un site d'agence de voyage immersif et multilingue avec guides de destinations animés et créateur de voyages.",
+        "ar": "موقع وكالة سفر تفاعلي ومتعدد اللغات مع أدلة وجهات متحركة وأداة لتصميم الرحلات."
+      },
+      "overview": {
+        "en": "A complete redesign of Atlas Travel's online presence, focused on storytelling, speed and conversions in three languages.",
+        "fr": "Une refonte complète de la présence en ligne d'Atlas Travel, axée sur la narration, la vitesse et la conversion en trois langues.",
+        "ar": "إعادة تصميم كاملة لحضور Atlas Travel على الإنترنت مع التركيز على السرد والسرعة والتحويل بثلاث لغات."
+      },
+      "challenge": {
+        "en": "Rich visuals and animations were slowing the old site down, especially on mobile networks.",
+        "fr": "Les visuels riches et les animations ralentissaient l'ancien site, surtout sur les réseaux mobiles.",
+        "ar": "كانت الصور الغنية والرسوم المتحركة تبطئ الموقع القديم، خاصة على شبكات الهاتف."
+      },
+      "solution": {
+        "en": "Responsive images, lazy loading, GPU-friendly animations and a full RTL layout for Arabic visitors.",
+        "fr": "Images responsives, chargement différé, animations optimisées GPU et une mise en page RTL complète pour les visiteurs arabophones.",
+        "ar": "صور متجاوبة وتحميل كسول ورسوم متحركة صديقة لمعالج الرسوميات وتخطيط كامل من اليمين لليسار للزوار العرب."
+      },
+      "results": [
+        {
+          "value": "98",
+          "label": {
+            "en": "Lighthouse performance",
+            "fr": "performance Lighthouse",
+            "ar": "أداء Lighthouse"
+          }
+        },
+        {
+          "value": "+70%",
+          "label": {
+            "en": "booking requests",
+            "fr": "de demandes de réservation",
+            "ar": "طلبات الحجز"
+          }
+        },
+        {
+          "value": "3",
+          "label": {
+            "en": "languages incl. RTL",
+            "fr": "langues dont RTL",
+            "ar": "لغات تشمل RTL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "paytrack-api",
+      "category": "backend",
+      "title": "PayTrack API",
+      "preview": "code",
+      "icon": "fa-server",
+      "accent": "#c58bff",
+      "year": "2025",
+      "client": "PayTrack Fintech",
+      "duration": {
+        "en": "3 months",
+        "fr": "3 mois",
+        "ar": "3 أشهر"
+      },
+      "role": {
+        "en": "Back-End Developer",
+        "fr": "Développeur Back-End",
+        "ar": "مطور خلفي"
+      },
+      "stack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT",
+        "Jest"
+      ],
+      "desc": {
+        "en": "A secure REST API for invoicing and payment tracking used by accounting apps and small businesses.",
+        "fr": "Une API REST sécurisée de facturation et de suivi des paiements utilisée par des logiciels comptables et des PME.",
+        "ar": "واجهة REST API آمنة للفوترة وتتبع المدفوعات تستخدمها تطبيقات المحاسبة والشركات الصغيرة."
+      },
+      "overview": {
+        "en": "PayTrack exposes invoicing, customers and payment-status endpoints with webhooks, rate limiting and thorough documentation.",
+        "fr": "PayTrack expose des endpoints de facturation, de clients et de statut de paiement avec webhooks, limitation de débit et documentation complète.",
+        "ar": "توفر PayTrack نقاط وصول للفواتير والعملاء وحالة الدفع مع Webhooks وتحديد للمعدل وتوثيق شامل."
+      },
+      "challenge": {
+        "en": "Financial data required strict security, auditability and predictable performance under load.",
+        "fr": "Les données financières exigeaient une sécurité stricte, une traçabilité complète et des performances prévisibles sous charge.",
+        "ar": "تطلبت البيانات المالية أمانًا صارمًا وقابلية للتدقيق وأداءً ثابتًا تحت الضغط."
+      },
+      "solution": {
+        "en": "JWT with refresh-token rotation, an append-only audit log, request validation, caching and 90%+ automated test coverage.",
+        "fr": "JWT avec rotation des jetons de rafraîchissement, journal d'audit immuable, validation des requêtes, cache et plus de 90 % de couverture de tests.",
+        "ar": "مصادقة JWT مع تدوير رموز التحديث، وسجل تدقيق غير قابل للتعديل، والتحقق من الطلبات، والتخزين المؤقت، وتغطية اختبارات تفوق 90%."
+      },
+      "results": [
+        {
+          "value": "2M+",
+          "label": {
+            "en": "requests per month",
+            "fr": "requêtes par mois",
+            "ar": "طلب شهريًا"
+          }
+        },
+        {
+          "value": "92%",
+          "label": {
+            "en": "test coverage",
+            "fr": "de couverture de tests",
+            "ar": "تغطية الاختبارات"
+          }
+        },
+        {
+          "value": "45ms",
+          "label": {
+            "en": "median response time",
+            "fr": "temps de réponse médian",
+            "ar": "متوسط زمن الاستجابة"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dar-realty",
+      "category": "fullstack",
+      "title": "Dar Realty",
+      "preview": "shop",
+      "icon": "fa-house",
+      "accent": "#4fc3d9",
+      "year": "2024",
+      "client": "Dar Realty Group",
+      "duration": {
+        "en": "4 months",
+        "fr": "4 mois",
+        "ar": "4 أشهر"
+      },
+      "role": {
+        "en": "Full-Stack Developer",
+        "fr": "Développeur Full-Stack",
+        "ar": "مطور Full-Stack"
+      },
+      "stack": [
+        "Laravel",
+        "Livewire",
+        "Alpine.js",
+        "MySQL",
+        "Mapbox"
+      ],
+      "desc": {
+        "en": "A real-estate listing platform with map search, advanced filters and an agent CRM.",
+        "fr": "Une plateforme d'annonces immobilières avec recherche sur carte, filtres avancés et CRM pour agents.",
+        "ar": "منصة إعلانات عقارية مع البحث على الخريطة وفلاتر متقدمة ونظام CRM للوكلاء."
+      },
+      "overview": {
+        "en": "Dar Realty centralizes thousands of listings and gives agents tools to manage leads, visits and contracts.",
+        "fr": "Dar Realty centralise des milliers d'annonces et fournit aux agents des outils pour gérer prospects, visites et contrats.",
+        "ar": "تجمع Dar Realty آلاف الإعلانات وتمنح الوكلاء أدوات لإدارة العملاء المحتملين والزيارات والعقود."
+      },
+      "challenge": {
+        "en": "Searching large datasets by location, price and features needed to feel instant.",
+        "fr": "La recherche dans de grands volumes de données par lieu, prix et caractéristiques devait paraître instantanée.",
+        "ar": "كان يجب أن يبدو البحث في كميات كبيرة من البيانات حسب الموقع والسعر والمواصفات فوريًا."
+      },
+      "solution": {
+        "en": "Geo-indexed queries, server-side filtering with Livewire and clustered map markers.",
+        "fr": "Requêtes géo-indexées, filtrage côté serveur avec Livewire et regroupement des marqueurs sur la carte.",
+        "ar": "استعلامات مفهرسة جغرافيًا، وتصفية من جهة الخادم عبر Livewire، وتجميع لعلامات الخريطة."
+      },
+      "results": [
+        {
+          "value": "8k+",
+          "label": {
+            "en": "listed properties",
+            "fr": "biens listés",
+            "ar": "عقار معروض"
+          }
+        },
+        {
+          "value": "+55%",
+          "label": {
+            "en": "qualified leads",
+            "fr": "de prospects qualifiés",
+            "ar": "عملاء محتملون مؤهلون"
+          }
+        },
+        {
+          "value": "0.3s",
+          "label": {
+            "en": "search response",
+            "fr": "temps de recherche",
+            "ar": "زمن البحث"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lumen-dashboard",
+      "category": "frontend",
+      "title": "Lumen Dashboard",
+      "preview": "dash",
+      "icon": "fa-chart-line",
+      "accent": "#ffd166",
+      "year": "2024",
+      "client": "Lumen Analytics",
+      "duration": {
+        "en": "3 months",
+        "fr": "3 mois",
+        "ar": "3 أشهر"
+      },
+      "role": {
+        "en": "Front-End Developer",
+        "fr": "Développeur Front-End",
+        "ar": "مطور واجهات أمامية"
+      },
+      "stack": [
+        "TypeScript",
+        "React",
+        "Chart.js",
+        "Tailwind",
+        "Vite"
+      ],
+      "desc": {
+        "en": "An analytics dashboard with interactive charts, custom reports and dark mode.",
+        "fr": "Un tableau de bord analytique avec graphiques interactifs, rapports personnalisés et mode sombre.",
+        "ar": "لوحة تحليلات مع رسوم بيانية تفاعلية وتقارير مخصصة ووضع داكن."
+      },
+      "overview": {
+        "en": "Lumen turns raw marketing data into clear, actionable dashboards for non-technical teams.",
+        "fr": "Lumen transforme des données marketing brutes en tableaux de bord clairs et exploitables pour des équipes non techniques.",
+        "ar": "تحوّل Lumen بيانات التسويق الخام إلى لوحات واضحة وقابلة للتنفيذ للفرق غير التقنية."
+      },
+      "challenge": {
+        "en": "Rendering large time-series datasets smoothly while keeping the interface simple.",
+        "fr": "Afficher de grandes séries temporelles de façon fluide tout en gardant une interface simple.",
+        "ar": "عرض سلاسل زمنية كبيرة بسلاسة مع الحفاظ على بساطة الواجهة."
+      },
+      "solution": {
+        "en": "Data decimation, virtualized tables, a reusable component library and an accessible color system.",
+        "fr": "Décimation des données, tableaux virtualisés, bibliothèque de composants réutilisables et système de couleurs accessible.",
+        "ar": "تقليص البيانات، وجداول افتراضية، ومكتبة مكونات قابلة لإعادة الاستخدام، ونظام ألوان سهل الوصول."
+      },
+      "results": [
+        {
+          "value": "60fps",
+          "label": {
+            "en": "chart interactions",
+            "fr": "interactions graphiques",
+            "ar": "تفاعل الرسوم البيانية"
+          }
+        },
+        {
+          "value": "40+",
+          "label": {
+            "en": "reusable components",
+            "fr": "composants réutilisables",
+            "ar": "مكوّن قابل لإعادة الاستخدام"
+          }
+        },
+        {
+          "value": "-50%",
+          "label": {
+            "en": "time to build reports",
+            "fr": "de temps de création de rapports",
+            "ar": "وقت إنشاء التقارير"
+          }
+        }
+      ]
+    },
+    {
+      "id": "edulearn",
+      "category": "webapp",
+      "title": "EduLearn LMS",
+      "preview": "dash",
+      "icon": "fa-graduation-cap",
+      "accent": "#e6a514",
+      "year": "2023",
+      "client": "EduLearn Academy",
+      "duration": {
+        "en": "5 months",
+        "fr": "5 mois",
+        "ar": "5 أشهر"
+      },
+      "role": {
+        "en": "Full-Stack Developer",
+        "fr": "Développeur Full-Stack",
+        "ar": "مطور Full-Stack"
+      },
+      "stack": [
+        "Django",
+        "Python",
+        "PostgreSQL",
+        "JavaScript",
+        "AWS S3"
+      ],
+      "desc": {
+        "en": "A learning-management system with video courses, quizzes, progress tracking and certificates.",
+        "fr": "Une plateforme d'apprentissage avec cours vidéo, quiz, suivi de progression et certificats.",
+        "ar": "نظام لإدارة التعلم مع دورات فيديو واختبارات وتتبع للتقدم وشهادات."
+      },
+      "overview": {
+        "en": "EduLearn delivers online courses to thousands of students with a smooth learning experience on every device.",
+        "fr": "EduLearn propose des cours en ligne à des milliers d'étudiants avec une expérience fluide sur tous les appareils.",
+        "ar": "تقدم EduLearn دورات عبر الإنترنت لآلاف الطلاب مع تجربة تعلم سلسة على جميع الأجهزة."
+      },
+      "challenge": {
+        "en": "Streaming video reliably and keeping students motivated to finish their courses.",
+        "fr": "Diffuser des vidéos de manière fiable et motiver les étudiants à terminer leurs cours.",
+        "ar": "بث الفيديو بشكل موثوق والحفاظ على تحفيز الطلاب لإكمال دوراتهم."
+      },
+      "solution": {
+        "en": "Adaptive video delivery through S3 and CloudFront, gamified progress tracking and auto-generated PDF certificates.",
+        "fr": "Diffusion vidéo adaptative via S3 et CloudFront, suivi de progression ludique et certificats PDF générés automatiquement.",
+        "ar": "بث فيديو متكيف عبر S3 وCloudFront، وتتبع تقدم بأسلوب الألعاب، وشهادات PDF تُنشأ تلقائيًا."
+      },
+      "results": [
+        {
+          "value": "5k+",
+          "label": {
+            "en": "enrolled students",
+            "fr": "étudiants inscrits",
+            "ar": "طالب مسجل"
+          }
+        },
+        {
+          "value": "+38%",
+          "label": {
+            "en": "course completion",
+            "fr": "de taux de complétion",
+            "ar": "معدل إتمام الدورات"
+          }
+        },
+        {
+          "value": "120+",
+          "label": {
+            "en": "published courses",
+            "fr": "cours publiés",
+            "ar": "دورة منشورة"
+          }
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "start": "2021",
+      "end": "2023",
+      "school": {
+        "en": "Faculty of Sciences, Mohammed V University",
+        "fr": "Faculté des Sciences, Université Mohammed V",
+        "ar": "كلية العلوم، جامعة محمد الخامس"
+      },
+      "degree": {
+        "en": "Master's Degree",
+        "fr": "Master",
+        "ar": "شهادة الماستر"
+      },
+      "field": {
+        "en": "Software Engineering & Information Systems",
+        "fr": "Génie logiciel et systèmes d'information",
+        "ar": "هندسة البرمجيات ونظم المعلومات"
+      },
+      "desc": {
+        "en": "Advanced software architecture, distributed systems and cloud computing. Final project: a microservices e-commerce platform.",
+        "fr": "Architecture logicielle avancée, systèmes distribués et cloud computing. Projet de fin d'études : une plateforme e-commerce en microservices.",
+        "ar": "هندسة برمجيات متقدمة وأنظمة موزعة وحوسبة سحابية. مشروع التخرج: منصة تجارة إلكترونية بالخدمات المصغرة."
+      }
+    },
+    {
+      "start": "2018",
+      "end": "2021",
+      "school": {
+        "en": "Faculty of Sciences, Mohammed V University",
+        "fr": "Faculté des Sciences, Université Mohammed V",
+        "ar": "كلية العلوم، جامعة محمد الخامس"
+      },
+      "degree": {
+        "en": "Bachelor's Degree",
+        "fr": "Licence",
+        "ar": "شهادة الإجازة"
+      },
+      "field": {
+        "en": "Computer Science",
+        "fr": "Informatique",
+        "ar": "علوم الحاسوب"
+      },
+      "desc": {
+        "en": "Algorithms, data structures, databases and web programming, with a strong focus on problem solving.",
+        "fr": "Algorithmique, structures de données, bases de données et programmation web, avec un fort accent sur la résolution de problèmes.",
+        "ar": "الخوارزميات وهياكل البيانات وقواعد البيانات وبرمجة الويب مع تركيز قوي على حل المشكلات."
+      }
+    },
+    {
+      "start": "2022",
+      "end": "2022",
+      "school": {
+        "en": "Online Professional Program",
+        "fr": "Programme professionnel en ligne",
+        "ar": "برنامج مهني عبر الإنترنت"
+      },
+      "degree": {
+        "en": "Professional Certificate",
+        "fr": "Certificat professionnel",
+        "ar": "شهادة مهنية"
+      },
+      "field": {
+        "en": "Cloud & DevOps Fundamentals",
+        "fr": "Fondamentaux Cloud et DevOps",
+        "ar": "أساسيات السحابة وDevOps"
+      },
+      "desc": {
+        "en": "Containers, CI/CD pipelines, infrastructure basics and deploying production-ready web applications.",
+        "fr": "Conteneurs, pipelines CI/CD, bases d'infrastructure et déploiement d'applications web en production.",
+        "ar": "الحاويات وخطوط CI/CD وأساسيات البنية التحتية ونشر تطبيقات الويب في بيئة الإنتاج."
+      }
+    }
+  ],
+  "experience": [
+    {
+      "start": "2024",
+      "end": null,
+      "role": {
+        "en": "Senior Full-Stack Developer",
+        "fr": "Développeur Full-Stack Senior",
+        "ar": "مطور Full-Stack أول"
+      },
+      "company": "Freelance",
+      "location": {
+        "en": "Remote",
+        "fr": "À distance",
+        "ar": "عن بُعد"
+      },
+      "desc": {
+        "en": "Designing and building web products for startups and agencies across Europe and MENA, from MVP to production.",
+        "fr": "Conception et développement de produits web pour des startups et agences en Europe et dans la région MENA, du MVP à la production.",
+        "ar": "تصميم وتطوير منتجات ويب للشركات الناشئة والوكالات في أوروبا والشرق الأوسط وشمال إفريقيا، من النموذج الأولي إلى الإنتاج."
+      }
+    },
+    {
+      "start": "2022",
+      "end": "2024",
+      "role": {
+        "en": "Full-Stack Developer",
+        "fr": "Développeur Full-Stack",
+        "ar": "مطور Full-Stack"
+      },
+      "company": "Nexa Digital",
+      "location": {
+        "en": "Casablanca, Morocco",
+        "fr": "Casablanca, Maroc",
+        "ar": "الدار البيضاء، المغرب"
+      },
+      "desc": {
+        "en": "Led development of client platforms with Laravel and React, mentored two junior developers and introduced CI/CD.",
+        "fr": "Direction du développement de plateformes clients avec Laravel et React, mentorat de deux développeurs juniors et mise en place du CI/CD.",
+        "ar": "قيادة تطوير منصات العملاء باستخدام Laravel وReact، وتوجيه مطورَين مبتدئَين، وإدخال التكامل المستمر."
+      }
+    },
+    {
+      "start": "2021",
+      "end": "2022",
+      "role": {
+        "en": "Front-End Developer",
+        "fr": "Développeur Front-End",
+        "ar": "مطور واجهات أمامية"
+      },
+      "company": "Pixel Studio",
+      "location": {
+        "en": "Rabat, Morocco",
+        "fr": "Rabat, Maroc",
+        "ar": "الرباط، المغرب"
+      },
+      "desc": {
+        "en": "Turned Figma designs into responsive, accessible interfaces and built a shared component library.",
+        "fr": "Intégration de maquettes Figma en interfaces responsives et accessibles, et création d'une bibliothèque de composants partagée.",
+        "ar": "تحويل تصاميم Figma إلى واجهات متجاوبة وسهلة الوصول، وبناء مكتبة مكونات مشتركة."
+      }
+    },
+    {
+      "start": "2020",
+      "end": "2021",
+      "role": {
+        "en": "Junior Back-End Developer",
+        "fr": "Développeur Back-End Junior",
+        "ar": "مطور خلفي مبتدئ"
+      },
+      "company": "DataCore Solutions",
+      "location": {
+        "en": "Rabat, Morocco",
+        "fr": "Rabat, Maroc",
+        "ar": "الرباط، المغرب"
+      },
+      "desc": {
+        "en": "Built REST APIs and database schemas for internal business tools using Node.js and PostgreSQL.",
+        "fr": "Développement d'API REST et de schémas de bases de données pour des outils métiers internes avec Node.js et PostgreSQL.",
+        "ar": "بناء واجهات REST API ومخططات قواعد البيانات لأدوات العمل الداخلية باستخدام Node.js وPostgreSQL."
+      }
+    },
+    {
+      "start": "2019",
+      "end": "2020",
+      "role": {
+        "en": "Web Developer Intern",
+        "fr": "Stagiaire Développeur Web",
+        "ar": "متدرب مطور ويب"
+      },
+      "company": "WebCraft Agency",
+      "location": {
+        "en": "Tangier, Morocco",
+        "fr": "Tanger, Maroc",
+        "ar": "طنجة، المغرب"
+      },
+      "desc": {
+        "en": "Developed WordPress and custom PHP websites and learned agile workflows in a real agency setting.",
+        "fr": "Développement de sites WordPress et PHP sur mesure, et apprentissage des méthodes agiles en agence.",
+        "ar": "تطوير مواقع ووردبريس ومواقع PHP مخصصة، وتعلم منهجيات العمل الرشيقة داخل وكالة حقيقية."
+      }
+    },
+    {
+      "start": "2018",
+      "end": "2019",
+      "role": {
+        "en": "Freelance Web Designer",
+        "fr": "Web Designer Freelance",
+        "ar": "مصمم ويب مستقل"
+      },
+      "company": "Self-employed",
+      "location": {
+        "en": "Rabat, Morocco",
+        "fr": "Rabat, Maroc",
+        "ar": "الرباط، المغرب"
+      },
+      "desc": {
+        "en": "Designed and coded landing pages and small business websites for local clients.",
+        "fr": "Conception et intégration de pages d'atterrissage et de sites vitrines pour des clients locaux.",
+        "ar": "تصميم وبرمجة صفحات هبوط ومواقع تعريفية للشركات الصغيرة لعملاء محليين."
+      }
+    }
+  ],
+  "posts": [
+    {
+      "id": "scalable-rest-apis-node",
+      "category": "backend",
+      "date": "2026-10-22",
+      "readTime": 8,
+      "image": "images/blog/rest-api.svg",
+      "title": {
+        "en": "Building Scalable REST APIs with Node.js and Express",
+        "fr": "Créer des API REST évolutives avec Node.js et Express",
+        "ar": "بناء واجهات REST API قابلة للتوسع باستخدام Node.js وExpress"
+      },
+      "excerpt": {
+        "en": "A practical guide to structuring, securing and scaling production-ready APIs — the patterns I use on every project.",
+        "fr": "Un guide pratique pour structurer, sécuriser et faire évoluer des API prêtes pour la production — les patterns que j'utilise sur chaque projet.",
+        "ar": "دليل عملي لهيكلة وتأمين وتوسيع واجهات API جاهزة للإنتاج — الأنماط التي أستخدمها في كل مشروع."
+      },
+      "body": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Every API starts small. A few routes, a database connection, and you're shipping. The problems appear later — when traffic grows, the team grows, and nobody remembers why a route behaves the way it does.",
+            "fr": "Chaque API commence petite. Quelques routes, une connexion à la base de données, et c'est parti. Les problèmes arrivent plus tard — quand le trafic augmente, que l'équipe grandit et que personne ne se souvient pourquoi une route se comporte ainsi.",
+            "ar": "تبدأ كل واجهة API صغيرة: بضعة مسارات واتصال بقاعدة البيانات وتنطلق. لكن المشاكل تظهر لاحقًا — عندما تزداد الزيارات ويكبر الفريق ولا يتذكر أحد سبب سلوك مسار معين."
+          }
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "1. Structure by feature, not by type",
+            "fr": "1. Organiser par fonctionnalité, pas par type",
+            "ar": "1. التنظيم حسب الميزة وليس حسب النوع"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Instead of global controllers, models and routes folders, group code by domain: users, invoices, payments. Each module owns its routes, validation, service and data access. New developers find things faster and changes stay local.",
+            "fr": "Au lieu de dossiers globaux controllers, models et routes, regroupez le code par domaine : utilisateurs, factures, paiements. Chaque module possède ses routes, sa validation, son service et son accès aux données.",
+            "ar": "بدلًا من مجلدات عامة للمتحكمات والنماذج والمسارات، اجمع الكود حسب المجال: المستخدمون، الفواتير، المدفوعات. كل وحدة تملك مساراتها وتحققها وخدماتها والوصول إلى بياناتها."
+          }
+        },
+        {
+          "type": "code",
+          "text": "src/\n  modules/\n    invoices/\n      invoices.routes.js\n      invoices.service.js\n      invoices.schema.js\n  middleware/\n  app.js"
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "2. Validate everything at the edge",
+            "fr": "2. Tout valider à l'entrée",
+            "ar": "2. تحقق من كل شيء عند المدخل"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Never trust input. A schema validator at the route level rejects bad requests before they reach your business logic, and doubles as living documentation.",
+            "fr": "Ne faites jamais confiance aux entrées. Un validateur de schéma au niveau des routes rejette les mauvaises requêtes avant la logique métier et sert de documentation vivante.",
+            "ar": "لا تثق أبدًا في المدخلات. أداة التحقق من المخطط على مستوى المسار ترفض الطلبات الخاطئة قبل وصولها إلى منطق العمل، وتعمل كتوثيق حي."
+          }
+        },
+        {
+          "type": "quote",
+          "text": {
+            "en": "A fast API that returns wrong data is worse than a slow one. Correctness first, then performance.",
+            "fr": "Une API rapide qui renvoie de mauvaises données est pire qu'une API lente. D'abord l'exactitude, ensuite la performance.",
+            "ar": "واجهة API سريعة تعيد بيانات خاطئة أسوأ من واجهة بطيئة. الصحة أولًا، ثم الأداء."
+          }
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "3. Plan for scale early",
+            "fr": "3. Anticiper la montée en charge",
+            "ar": "3. خطط للتوسع مبكرًا"
+          }
+        },
+        {
+          "type": "ul",
+          "text": {
+            "en": [
+              "Paginate every list endpoint",
+              "Cache read-heavy responses",
+              "Move slow jobs to a queue",
+              "Log with request IDs"
+            ],
+            "fr": [
+              "Paginez chaque endpoint de liste",
+              "Mettez en cache les réponses très consultées",
+              "Déplacez les tâches lentes dans une file",
+              "Journalisez avec des identifiants de requête"
+            ],
+            "ar": [
+              "أضف ترقيم الصفحات لكل نقطة قائمة",
+              "خزّن مؤقتًا الاستجابات كثيرة القراءة",
+              "انقل المهام البطيئة إلى طابور",
+              "سجّل الأحداث بمعرّفات الطلبات"
+            ]
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "None of these are complicated on their own. Together, they are the difference between an API that survives its first big launch and one that doesn't.",
+            "fr": "Aucune de ces pratiques n'est compliquée en soi. Ensemble, elles font la différence entre une API qui survit à son premier grand lancement et une autre qui s'effondre.",
+            "ar": "لا شيء من هذه الممارسات معقد بمفرده، لكنها مجتمعة تصنع الفرق بين واجهة تصمد أمام أول إطلاق كبير وأخرى تنهار."
+          }
+        }
+      ]
+    },
+    {
+      "id": "rtl-multilingual-websites",
+      "category": "frontend",
+      "date": "2026-09-30",
+      "readTime": 6,
+      "image": "images/blog/rtl.svg",
+      "title": {
+        "en": "Designing for RTL: Building Truly Multilingual Websites",
+        "fr": "Concevoir pour le RTL : créer des sites vraiment multilingues",
+        "ar": "التصميم للغات RTL: بناء مواقع متعددة اللغات حقًا"
+      },
+      "excerpt": {
+        "en": "Arabic support is more than dir=\"rtl\". Here's how to make right-to-left layouts feel designed, not mirrored.",
+        "fr": "Le support de l'arabe ne se limite pas à dir=\"rtl\". Voici comment rendre les mises en page de droite à gauche vraiment pensées.",
+        "ar": "دعم العربية أكثر من مجرد dir=\"rtl\". إليك كيف تجعل التخطيطات من اليمين لليسار تبدو مصممة لا معكوسة."
+      },
+      "body": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Flipping a layout is easy. Making it feel natural to an Arabic reader takes a few more deliberate decisions — about typography, icons, numbers and rhythm.",
+            "fr": "Inverser une mise en page est facile. La rendre naturelle pour un lecteur arabophone demande quelques décisions supplémentaires — typographie, icônes, chiffres et rythme.",
+            "ar": "قلب التخطيط أمر سهل، لكن جعله طبيعيًا للقارئ العربي يتطلب قرارات مدروسة تتعلق بالخطوط والأيقونات والأرقام والإيقاع."
+          }
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "Use logical CSS properties",
+            "fr": "Utiliser les propriétés CSS logiques",
+            "ar": "استخدم خصائص CSS المنطقية"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Replace margin-left with margin-inline-start, and left with inset-inline-start. Your layout then adapts to the document direction automatically, with no duplicate stylesheet.",
+            "fr": "Remplacez margin-left par margin-inline-start et left par inset-inline-start. La mise en page s'adapte alors automatiquement au sens du document, sans feuille de style dupliquée.",
+            "ar": "استبدل margin-left بـ margin-inline-start وleft بـ inset-inline-start. سيتكيف التخطيط تلقائيًا مع اتجاه المستند دون الحاجة إلى ملف أنماط مكرر."
+          }
+        },
+        {
+          "type": "code",
+          "text": ".card-arrow {\n  inset-inline-end: 1.25rem; /* right in LTR, left in RTL */\n}"
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "Choose a real Arabic typeface",
+            "fr": "Choisir une vraie police arabe",
+            "ar": "اختر خطًا عربيًا حقيقيًا"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Latin fonts with fallback Arabic glyphs look broken. Fonts like Cairo or Tajawal are designed for screens, and Arabic usually needs a taller line height.",
+            "fr": "Les polices latines avec des glyphes arabes de secours paraissent cassées. Des polices comme Cairo ou Tajawal sont pensées pour l'écran, et l'arabe demande souvent un interligne plus grand.",
+            "ar": "تبدو الخطوط اللاتينية مع حروف عربية احتياطية مكسورة. خطوط مثل Cairo وTajawal مصممة للشاشات، وتحتاج العربية عادةً إلى تباعد أسطر أكبر."
+          }
+        },
+        {
+          "type": "quote",
+          "text": {
+            "en": "Don't mirror everything: logos, media controls and code stay left-to-right.",
+            "fr": "Ne retournez pas tout : les logos, les contrôles média et le code restent de gauche à droite.",
+            "ar": "لا تعكس كل شيء: الشعارات وأزرار تشغيل الوسائط والكود تبقى من اليسار إلى اليمين."
+          }
+        },
+        {
+          "type": "ul",
+          "text": {
+            "en": [
+              "Flip directional icons such as arrows",
+              "Remove letter-spacing on Arabic text",
+              "Test with real content, not lorem ipsum"
+            ],
+            "fr": [
+              "Retournez les icônes directionnelles comme les flèches",
+              "Supprimez l'espacement des lettres pour l'arabe",
+              "Testez avec du vrai contenu, pas du lorem ipsum"
+            ],
+            "ar": [
+              "اعكس الأيقونات الاتجاهية مثل الأسهم",
+              "أزل تباعد الحروف في النص العربي",
+              "اختبر بمحتوى حقيقي وليس نصًا وهميًا"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "core-web-vitals",
+      "category": "performance",
+      "date": "2026-09-04",
+      "readTime": 7,
+      "image": "images/blog/performance.svg",
+      "title": {
+        "en": "Core Web Vitals Explained: Make Your Site Feel Instant",
+        "fr": "Les Core Web Vitals expliqués : un site qui paraît instantané",
+        "ar": "شرح مؤشرات Core Web Vitals: اجعل موقعك يبدو فوريًا"
+      },
+      "excerpt": {
+        "en": "LCP, INP and CLS in plain words — and the quick wins that improved my clients' scores the most.",
+        "fr": "LCP, INP et CLS en termes simples — et les gains rapides qui ont le plus amélioré les scores de mes clients.",
+        "ar": "مؤشرات LCP وINP وCLS بكلمات بسيطة — والتحسينات السريعة التي رفعت نتائج عملائي أكثر من غيرها."
+      },
+      "body": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Performance isn't a number on a report — it's how your site feels. Core Web Vitals are Google's attempt to measure that feeling.",
+            "fr": "La performance n'est pas un chiffre dans un rapport — c'est la sensation que donne votre site. Les Core Web Vitals sont la tentative de Google de mesurer cette sensation.",
+            "ar": "الأداء ليس رقمًا في تقرير، بل هو الإحساس الذي يمنحه موقعك. مؤشرات Core Web Vitals هي محاولة Google لقياس هذا الإحساس."
+          }
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "The three metrics",
+            "fr": "Les trois indicateurs",
+            "ar": "المؤشرات الثلاثة"
+          }
+        },
+        {
+          "type": "ul",
+          "text": {
+            "en": [
+              "LCP — how fast the main content appears",
+              "INP — how quickly the page responds to input",
+              "CLS — how stable the layout is while loading"
+            ],
+            "fr": [
+              "LCP — la vitesse d'affichage du contenu principal",
+              "INP — la réactivité de la page aux interactions",
+              "CLS — la stabilité de la mise en page pendant le chargement"
+            ],
+            "ar": [
+              "LCP — سرعة ظهور المحتوى الرئيسي",
+              "INP — سرعة استجابة الصفحة للتفاعل",
+              "CLS — مدى ثبات التخطيط أثناء التحميل"
+            ]
+          }
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "Quick wins",
+            "fr": "Gains rapides",
+            "ar": "تحسينات سريعة"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Serve modern image formats with explicit width and height, preload your hero image and main font, and defer every script that isn't needed for the first paint.",
+            "fr": "Servez des formats d'image modernes avec largeur et hauteur explicites, préchargez l'image principale et la police, et différez tout script inutile au premier affichage.",
+            "ar": "استخدم صيغ صور حديثة مع تحديد العرض والارتفاع، وحمّل مسبقًا الصورة الرئيسية والخط الأساسي، وأجّل كل سكربت غير ضروري للعرض الأول."
+          }
+        },
+        {
+          "type": "quote",
+          "text": {
+            "en": "The fastest request is the one you never make.",
+            "fr": "La requête la plus rapide est celle que l'on ne fait jamais.",
+            "ar": "أسرع طلب هو الطلب الذي لا ترسله أبدًا."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Measure with real-user data when you can. Lab scores are a guide; your visitors' phones are the truth.",
+            "fr": "Mesurez avec des données d'utilisateurs réels quand c'est possible. Les scores de laboratoire guident ; les téléphones de vos visiteurs disent la vérité.",
+            "ar": "قِس ببيانات المستخدمين الحقيقيين متى أمكن. نتائج المختبر مجرد دليل، أما هواتف زوارك فهي الحقيقة."
+          }
+        }
+      ]
+    },
+    {
+      "id": "css-grid-flexbox",
+      "category": "frontend",
+      "date": "2026-08-12",
+      "readTime": 5,
+      "image": "images/blog/css-layout.svg",
+      "title": {
+        "en": "CSS Grid vs Flexbox: When to Use Which",
+        "fr": "CSS Grid ou Flexbox : lequel utiliser et quand",
+        "ar": "CSS Grid أم Flexbox: متى تستخدم كلًا منهما"
+      },
+      "excerpt": {
+        "en": "A simple mental model for choosing the right layout tool, with real examples from production interfaces.",
+        "fr": "Un modèle mental simple pour choisir le bon outil de mise en page, avec des exemples concrets d'interfaces en production.",
+        "ar": "نموذج ذهني بسيط لاختيار أداة التخطيط المناسبة مع أمثلة حقيقية من واجهات منشورة."
+      },
+      "body": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Flexbox and Grid aren't competitors. They solve different problems, and most good layouts use both.",
+            "fr": "Flexbox et Grid ne sont pas concurrents. Ils résolvent des problèmes différents, et la plupart des bonnes mises en page utilisent les deux.",
+            "ar": "Flexbox وGrid ليسا متنافسين، بل يحلان مشكلات مختلفة، ومعظم التخطيطات الجيدة تستخدم الاثنين."
+          }
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "Flexbox: content first",
+            "fr": "Flexbox : le contenu d'abord",
+            "ar": "Flexbox: المحتوى أولًا"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Use Flexbox when items should size themselves from their content along one axis: navigation bars, button groups, tags.",
+            "fr": "Utilisez Flexbox quand les éléments doivent se dimensionner selon leur contenu sur un axe : barres de navigation, groupes de boutons, étiquettes.",
+            "ar": "استخدم Flexbox عندما يجب أن تتحدد أحجام العناصر حسب محتواها على محور واحد: أشرطة التنقل ومجموعات الأزرار والوسوم."
+          }
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "Grid: layout first",
+            "fr": "Grid : la mise en page d'abord",
+            "ar": "Grid: التخطيط أولًا"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Use Grid when you define the structure first and place content into it: card grids, page shells, dashboards.",
+            "fr": "Utilisez Grid quand vous définissez d'abord la structure pour y placer le contenu : grilles de cartes, gabarits de pages, tableaux de bord.",
+            "ar": "استخدم Grid عندما تحدد البنية أولًا ثم تضع المحتوى داخلها: شبكات البطاقات وهياكل الصفحات ولوحات التحكم."
+          }
+        },
+        {
+          "type": "code",
+          "text": ".cards {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n  gap: 1.5rem;\n}"
+        },
+        {
+          "type": "quote",
+          "text": {
+            "en": "One dimension? Flexbox. Two dimensions? Grid.",
+            "fr": "Une dimension ? Flexbox. Deux dimensions ? Grid.",
+            "ar": "بُعد واحد؟ Flexbox. بُعدان؟ Grid."
+          }
+        }
+      ]
+    },
+    {
+      "id": "junior-to-fullstack",
+      "category": "career",
+      "date": "2026-07-01",
+      "readTime": 6,
+      "image": "images/blog/career.svg",
+      "title": {
+        "en": "From Junior to Full-Stack: Lessons from My Journey",
+        "fr": "De junior à Full-Stack : leçons de mon parcours",
+        "ar": "من مبتدئ إلى مطور Full-Stack: دروس من مسيرتي"
+      },
+      "excerpt": {
+        "en": "Seven years, many mistakes and a few good habits — what actually helped me grow as a developer.",
+        "fr": "Sept ans, beaucoup d'erreurs et quelques bonnes habitudes — ce qui m'a vraiment aidé à progresser.",
+        "ar": "سبع سنوات، وأخطاء كثيرة، وبعض العادات الجيدة — ما الذي ساعدني فعلًا على التطور كمطور."
+      },
+      "body": [
+        {
+          "type": "p",
+          "text": {
+            "en": "When I wrote my first PHP page, I thought being a good developer meant knowing every framework. It turns out that's one of the least important parts.",
+            "fr": "Quand j'ai écrit ma première page PHP, je pensais qu'être un bon développeur signifiait connaître tous les frameworks. C'est en fait l'un des aspects les moins importants.",
+            "ar": "عندما كتبت أول صفحة PHP، ظننت أن المطور الجيد هو من يعرف كل الأطر. تبيّن أن هذا من أقل الجوانب أهمية."
+          }
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "Learn the fundamentals deeply",
+            "fr": "Maîtriser les fondamentaux",
+            "ar": "تعلّم الأساسيات بعمق"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "HTTP, databases, the browser and plain JavaScript outlive every trend. Frameworks become easy once you understand what they abstract.",
+            "fr": "HTTP, les bases de données, le navigateur et le JavaScript natif survivent à toutes les modes. Les frameworks deviennent simples quand on comprend ce qu'ils abstraient.",
+            "ar": "بروتوكول HTTP وقواعد البيانات والمتصفح وJavaScript الخام تبقى رغم كل الصيحات. تصبح الأطر سهلة عندما تفهم ما تخفيه."
+          }
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "Ship, then improve",
+            "fr": "Livrer, puis améliorer",
+            "ar": "أطلق ثم حسّن"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Real feedback from real users taught me more than any tutorial. Finished and imperfect beats perfect and unreleased.",
+            "fr": "Les retours de vrais utilisateurs m'ont plus appris que n'importe quel tutoriel. Terminé et imparfait vaut mieux que parfait et jamais publié.",
+            "ar": "علّمتني ملاحظات المستخدمين الحقيقيين أكثر من أي درس. عمل مكتمل وغير مثالي أفضل من عمل مثالي لم يُنشر."
+          }
+        },
+        {
+          "type": "ul",
+          "text": {
+            "en": [
+              "Read other people's code",
+              "Write things down",
+              "Ask questions early",
+              "Teach what you learn"
+            ],
+            "fr": [
+              "Lisez le code des autres",
+              "Prenez des notes",
+              "Posez vos questions tôt",
+              "Enseignez ce que vous apprenez"
+            ],
+            "ar": [
+              "اقرأ كود الآخرين",
+              "دوّن ما تتعلمه",
+              "اسأل مبكرًا",
+              "علّم ما تتعلمه"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "laravel-vs-node",
+      "category": "backend",
+      "date": "2026-05-20",
+      "readTime": 7,
+      "image": "images/blog/laravel-node.svg",
+      "title": {
+        "en": "Laravel vs Node.js: Choosing the Right Back-End",
+        "fr": "Laravel ou Node.js : choisir le bon back-end",
+        "ar": "Laravel أم Node.js: اختيار النظام الخلفي المناسب"
+      },
+      "excerpt": {
+        "en": "I've shipped production apps with both. Here's how I decide which one fits a new project.",
+        "fr": "J'ai livré des applications en production avec les deux. Voici comment je choisis pour un nouveau projet.",
+        "ar": "أطلقت تطبيقات إنتاجية بكليهما. إليك كيف أقرر أيهما يناسب مشروعًا جديدًا."
+      },
+      "body": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Both are excellent. The right choice depends less on benchmarks and more on the product, the team and the timeline.",
+            "fr": "Les deux sont excellents. Le bon choix dépend moins des benchmarks que du produit, de l'équipe et des délais.",
+            "ar": "كلاهما ممتاز، والاختيار الصحيح يعتمد على المنتج والفريق والجدول الزمني أكثر من اختبارات الأداء."
+          }
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "When I pick Laravel",
+            "fr": "Quand je choisis Laravel",
+            "ar": "متى أختار Laravel"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Content-heavy platforms, admin panels and classic CRUD apps. Authentication, queues, mail and an ORM come out of the box, so I can move very fast.",
+            "fr": "Plateformes riches en contenu, back-offices et applications CRUD classiques. Authentification, files, e-mails et ORM sont inclus, ce qui permet d'avancer très vite.",
+            "ar": "المنصات الغنية بالمحتوى ولوحات الإدارة وتطبيقات CRUD التقليدية. المصادقة والطوابير والبريد وORM متوفرة جاهزة، فأتقدم بسرعة كبيرة."
+          }
+        },
+        {
+          "type": "h2",
+          "text": {
+            "en": "When I pick Node.js",
+            "fr": "Quand je choisis Node.js",
+            "ar": "متى أختار Node.js"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Real-time features, APIs consumed by JavaScript front-ends and teams that want one language across the stack.",
+            "fr": "Fonctionnalités temps réel, API consommées par des front-ends JavaScript et équipes qui veulent un seul langage sur toute la stack.",
+            "ar": "الميزات الفورية، وواجهات API التي تستهلكها واجهات JavaScript، والفرق التي تريد لغة واحدة عبر كامل المنظومة."
+          }
+        },
+        {
+          "type": "quote",
+          "text": {
+            "en": "The best stack is the one your team can maintain at 2 a.m.",
+            "fr": "La meilleure stack est celle que votre équipe peut maintenir à 2 h du matin.",
+            "ar": "أفضل منظومة تقنية هي التي يستطيع فريقك صيانتها في الثانية فجرًا."
+          }
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "group": "frontend",
+      "icon": "fa-display",
+      "items": [
+        [
+          "HTML5 / CSS3",
+          95
+        ],
+        [
+          "JavaScript / TypeScript",
+          90
+        ],
+        [
+          "React / Vue.js",
+          85
+        ],
+        [
+          "Bootstrap / Tailwind",
+          90
+        ]
+      ]
+    },
+    {
+      "group": "backend",
+      "icon": "fa-server",
+      "items": [
+        [
+          "Node.js / Express",
+          88
+        ],
+        [
+          "PHP / Laravel",
+          85
+        ],
+        [
+          "Python / Django",
+          75
+        ],
+        [
+          "REST & GraphQL",
+          85
+        ]
+      ]
+    },
+    {
+      "group": "tools",
+      "icon": "fa-screwdriver-wrench",
+      "items": [
+        [
+          "MySQL / PostgreSQL",
+          85
+        ],
+        [
+          "MongoDB / Redis",
+          78
+        ],
+        [
+          "Git / CI/CD",
+          85
+        ],
+        [
+          "Docker / Linux",
+          75
+        ]
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "HTML5",
+      "icon": "fa-brands fa-html5"
+    },
+    {
+      "name": "CSS3",
+      "icon": "fa-brands fa-css3-alt"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "fa-brands fa-js"
+    },
+    {
+      "name": "React",
+      "icon": "fa-brands fa-react"
+    },
+    {
+      "name": "Vue.js",
+      "icon": "fa-brands fa-vuejs"
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "fa-brands fa-bootstrap"
+    },
+    {
+      "name": "Node.js",
+      "icon": "fa-brands fa-node-js"
+    },
+    {
+      "name": "Laravel",
+      "icon": "fa-brands fa-laravel"
+    },
+    {
+      "name": "Python",
+      "icon": "fa-brands fa-python"
+    },
+    {
+      "name": "Docker",
+      "icon": "fa-brands fa-docker"
+    },
+    {
+      "name": "Git",
+      "icon": "fa-brands fa-git-alt"
+    },
+    {
+      "name": "Figma",
+      "icon": "fa-brands fa-figma"
+    }
+  ]
+}
