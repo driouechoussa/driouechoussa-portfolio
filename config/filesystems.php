@@ -40,7 +40,10 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            // PUBLIC_DISK_ROOT (relative to the project) is for machines that can't
+            // run `php artisan storage:link`, e.g. a FAT32 drive with no symlinks.
+            // Set it to "public/storage" to save uploads straight into public/.
+            'root' => env('PUBLIC_DISK_ROOT') ? base_path(env('PUBLIC_DISK_ROOT')) : storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,
