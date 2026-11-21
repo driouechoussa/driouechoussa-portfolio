@@ -10,6 +10,7 @@ use App\Models\Education;
 use App\Models\Experience;
 use App\Models\SkillGroup;
 use App\Models\Tool;
+use App\Support\ExperienceYears;
 use App\Support\PortfolioData;
 use Illuminate\View\View;
 
@@ -24,6 +25,7 @@ class AboutController extends Controller
                 'experience' => ExperienceResource::collection(Experience::ordered()->take(6)->get()),
                 'education' => EducationResource::collection(Education::ordered()->get()),
             ]),
+            'yearsOfExperience' => ExperienceYears::total(),
         ]);
     }
 }

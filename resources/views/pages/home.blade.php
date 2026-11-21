@@ -31,7 +31,7 @@
           <a class="btn-ui btn-ui--outline btn-ui--lg" href="{{ localized_route('projects.index') }}"><span data-i18n="hero.works">{{ __('ui.hero.works') }}</span><i class="fa-solid fa-arrow-right dir-icon" aria-hidden="true"></i></a>
         </div>
         <dl class="id-stats">
-          <div><dt data-count="{{ config('portfolio.stats.years') }}"><span class="count-num">{{ config('portfolio.stats.years') }}</span>+</dt><dd data-i18n="stats.years">{{ __('ui.stats.years') }}</dd></div>
+          <div><dt data-count="{{ $yearsOfExperience }}"><span class="count-num">{{ $yearsOfExperience }}</span>+</dt><dd data-i18n="stats.years">{{ __('ui.stats.years') }}</dd></div>
           <div><dt data-count="{{ config('portfolio.stats.projects') }}"><span class="count-num">{{ config('portfolio.stats.projects') }}</span>+</dt><dd data-i18n="stats.projects">{{ __('ui.stats.projects') }}</dd></div>
           <div><dt data-count="{{ config('portfolio.stats.clients') }}"><span class="count-num">{{ config('portfolio.stats.clients') }}</span>+</dt><dd data-i18n="stats.clients">{{ __('ui.stats.clients') }}</dd></div>
         </dl>

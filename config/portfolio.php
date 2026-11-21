@@ -43,6 +43,8 @@ return [
     | Numbers shown in the hero and on the About page ("7+ years", …).
     */
     'stats' => [
+        // Used only while no experience exists: otherwise the years are
+        // counted from the positions saved in the admin panel.
         'years' => 7,
         'projects' => 50,
         'clients' => 30,

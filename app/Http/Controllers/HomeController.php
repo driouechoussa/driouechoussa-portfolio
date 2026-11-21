@@ -10,6 +10,7 @@ use App\Models\Education;
 use App\Models\Experience;
 use App\Models\Post;
 use App\Models\Project;
+use App\Support\ExperienceYears;
 use App\Support\PortfolioData;
 use Illuminate\View\View;
 
@@ -24,6 +25,7 @@ class HomeController extends Controller
                 'experience' => ExperienceResource::collection(Experience::ordered()->take(6)->get()),
                 'posts' => PostResource::collection(Post::published()->take(3)->get()),
             ]),
+            'yearsOfExperience' => ExperienceYears::total(),
         ]);
     }
 }

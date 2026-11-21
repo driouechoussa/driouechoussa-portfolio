@@ -42,7 +42,7 @@
       </div>
       <div class="stats">
         <div class="stat reveal">
-          <p class="stat-value" data-count="{{ config('portfolio.stats.years') }}"><span class="count-num">{{ config('portfolio.stats.years') }}</span><span class="plus">+</span></p>
+          <p class="stat-value" data-count="{{ $yearsOfExperience }}"><span class="count-num">{{ $yearsOfExperience }}</span><span class="plus">+</span></p>
           <p class="stat-label" data-i18n="stats.years">{{ __('ui.stats.years') }}</p>
         </div>
         <div class="stat reveal">
