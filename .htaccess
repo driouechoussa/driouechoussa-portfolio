@@ -1,0 +1,23 @@
+# ---------------------------------------------------------------
+# Shared hosting (e.g. Hostinger) where the project lives inside
+# public_html and the document root cannot be pointed at public/.
+#
+# Every request is sent into public/, so files outside it (.env,
+# storage/, database/, composer.json…) can never be downloaded:
+# they don't exist inside public/ and Laravel answers 404.
+#
+# Ignored when the document root is already public/ (VPS setup).
+# ---------------------------------------------------------------
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Fallback if mod_rewrite is ever disabled: refuse rather than expose files.
+<IfModule !mod_rewrite.c>
+    Require all denied
+</IfModule>

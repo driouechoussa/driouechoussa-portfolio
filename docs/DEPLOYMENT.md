@@ -26,6 +26,7 @@ Then, on the server: `bash deploy.sh`.
 - MySQL 8 / MariaDB 10.6+, or SQLite.
 - HTTPS certificate (Let's Encrypt). The site redirects HTTP to HTTPS and sends HSTS in production.
 - **The web server's document root must be the `public/` folder**, never the project root (that would expose `.env`).
+  On shared hosting where the project lives in `public_html` and the document root can't be changed (e.g. Hostinger), the `.htaccess` at the project root sends every request into `public/` instead. Keep that file on the server.
 
 ## First deploy
 
