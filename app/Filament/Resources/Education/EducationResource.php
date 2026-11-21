@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Education;
 use App\Filament\Resources\Education\Pages\CreateEducation;
 use App\Filament\Resources\Education\Pages\EditEducation;
 use App\Filament\Resources\Education\Pages\ListEducation;
+use App\Filament\Support\MonthPicker;
 use App\Filament\Support\Translatable;
 use App\Models\Education;
 use BackedEnum;
@@ -39,8 +40,10 @@ class EducationResource extends Resource
     {
         return $schema->components([
             Section::make()->columns(2)->schema([
-                TextInput::make('start_year')->required()->length(4)->numeric(),
-                TextInput::make('end_year')->length(4)->numeric()->helperText('Leave empty if ongoing.'),
+                MonthPicker::make('start_date', 'Start (month/year)')->required(),
+                MonthPicker::make('end_date', 'End (month/year)')
+                    ->afterOrEqual('start_date')
+                    ->helperText('Leave empty if ongoing.'),
             ]),
             Translatable::tabs('Content', fn (string $locale) => [
                 TextInput::make("school.$locale")->label('School')->required(Translatable::required($locale)),
@@ -57,8 +60,8 @@ class EducationResource extends Resource
             ->columns([
                 TextColumn::make('degree.en')->label('Degree'),
                 TextColumn::make('school.en')->label('School')->limit(50),
-                TextColumn::make('start_year')->label('From'),
-                TextColumn::make('end_year')->label('To')->placeholder('Now'),
+                TextColumn::make('start_date')->label('From')->date(Education::MONTH_FORMAT),
+                TextColumn::make('end_date')->label('To')->date(Education::MONTH_FORMAT)->placeholder('Now'),
             ])
             ->defaultSort('sort_order')
             ->reorderable('sort_order')

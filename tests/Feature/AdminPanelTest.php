@@ -1,9 +1,11 @@
 <?php
 
 use App\Filament\Resources\ContactMessages\Pages\ViewContactMessage;
+use App\Filament\Resources\Experiences\Pages\CreateExperience;
 use App\Filament\Resources\Posts\Pages\CreatePost;
 use App\Filament\Resources\Projects\Pages\EditProject;
 use App\Models\ContactMessage;
+use App\Models\Experience;
 use App\Models\Post;
 use App\Models\Project;
 use App\Models\User;
@@ -72,6 +74,33 @@ it('creates a blog post with a list block and French left empty', function () {
 
     // French falls back to English on the French site.
     $this->get('/fr/blog/new-post')->assertOk()->assertSee('A new post');
+});
+
+it('saves experience dates as month/year and rejects an end before the start', function () {
+    $this->actingAs(admin());
+    $form = [
+        'company' => 'Acme',
+        'role' => ['en' => 'Lead developer'],
+        'location' => ['en' => 'Remote'],
+        'description' => ['en' => 'Built things.'],
+        'start_date' => '2023-06-17',
+    ];
+
+    Livewire::test(CreateExperience::class)
+        ->fillForm($form + ['end_date' => '2023-05-01'])
+        ->call('create')
+        ->assertHasFormErrors(['end_date']);
+
+    Livewire::test(CreateExperience::class)
+        ->fillForm($form + ['end_date' => null])
+        ->call('create')
+        ->assertHasNoFormErrors();
+
+    $experience = Experience::where('company', 'Acme')->sole();
+    expect($experience->start_date->toDateString())->toBe('2023-06-01')
+        ->and($experience->end_date)->toBeNull()
+        ->and((new App\Http\Resources\ExperienceResource($experience))->resolve())
+        ->toMatchArray(['start' => '06/2023', 'end' => null]);
 });
 
 it('marks a message as read when it is opened', function () {

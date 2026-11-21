@@ -11,8 +11,8 @@ class EducationResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'start' => $this->start_year,
-            'end' => $this->end_year,
+            'start' => $this->startMonth(),
+            'end' => $this->endMonth(),
             'school' => $this->school,
             'degree' => $this->degree,
             'field' => $this->field,

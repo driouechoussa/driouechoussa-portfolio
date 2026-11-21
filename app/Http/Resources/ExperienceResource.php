@@ -11,8 +11,8 @@ class ExperienceResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'start' => $this->start_year,
-            'end' => $this->end_year,
+            'start' => $this->startMonth(),
+            'end' => $this->endMonth(),
             'role' => $this->role,
             'company' => $this->company,
             'location' => $this->location,

@@ -9,6 +9,7 @@ use App\Models\Project;
 use App\Models\SkillGroup;
 use App\Models\Tool;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -92,8 +93,8 @@ class PortfolioSeeder extends Seeder
                 'degree' => $e['degree'],
                 'field' => $e['field'],
                 'description' => $e['desc'],
-                'start_year' => $e['start'],
-                'end_year' => $e['end'],
+                'start_date' => self::monthDate($e['start']),
+                'end_date' => self::monthDate($e['end'], isEnd: true),
                 'sort_order' => $order,
             ]);
         }
@@ -109,11 +110,26 @@ class PortfolioSeeder extends Seeder
                 'company' => $x['company'],
                 'location' => $x['location'],
                 'description' => $x['desc'],
-                'start_year' => $x['start'],
-                'end_year' => $x['end'],
+                'start_date' => self::monthDate($x['start']),
+                'end_date' => self::monthDate($x['end'], isEnd: true),
                 'sort_order' => $order,
             ]);
         }
+    }
+
+    /**
+     * "2021-06" → 2021-06-01. A bare year starts in January,
+     * or ends in December when it is an end date. Null = ongoing.
+     */
+    private static function monthDate(?string $value, bool $isEnd = false): ?string
+    {
+        if (blank($value)) {
+            return null;
+        }
+
+        return preg_match('/^\d{4}$/', $value)
+            ? $value.($isEnd ? '-12-01' : '-01-01')
+            : Carbon::parse($value)->startOfMonth()->toDateString();
     }
 
     private function seedSkills(array $groups): void
